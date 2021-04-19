@@ -1,0 +1,32 @@
+apply plugin: 'maven'
+
+String versionName = "1.0.0"
+String outPutPath = "file:///Users/gongxiaoyun/Documents/custom-component-aar"
+
+ext {
+    PUBLISH_GROUP_ID = 'com.ll'
+    PUBLISH_ARTIFACT_ID = 'component'
+    PUBLISH_VERSION = versionName
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        // 输出地址
+        repository(url:"file:///Users/gongxiaoyun/Documents/custom-component-aar")
+
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+
+task androidSourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+artifacts {
+    archives androidSourcesJar
+}
