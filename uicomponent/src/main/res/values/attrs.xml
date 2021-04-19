@@ -18,7 +18,39 @@
         <attr name="empty_title_topToBottom_icon" format="boolean" />
     </declare-styleable>
 
-
+    <declare-styleable name="FormView">
+        <attr name="form_name" format="string" />
+        <attr name="form_name_text_size" format="dimension" />
+        <attr name="form_name_text_color" format="color" />
+        <attr name="form_name_text_style" format="enum">
+            <enum name="BOLD" value="1"/>
+            <enum name="NORMAL" value="0"/>
+        </attr>
+        <attr name="form_unit" format="string" />
+        <attr name="form_unit_text_size" format="dimension" />
+        <attr name="form_unit_text_color" format="color" />
+        <attr name="form_end_icon" format="reference" />
+        <attr name="form_bottom_line_margin_start" format="dimension" />
+        <attr name="form_bottom_line_color" format="color" />
+        <attr name="form_bottom_line_gone" format="boolean" />
+        <attr name="form_edit_hint" format="string" />
+        <attr name="form_edit_input_enable" format="boolean"/>
+        <attr name="form_edit_hint_color" format="color" />
+        <attr name="form_edit_text_size" format="dimension" />
+        <attr name="form_edit_text_color" format="color" />
+        <attr name="form_edit_text" format="string"/>
+        <attr name="form_edit_text_style" format="enum">
+            <enum name="BOLD" value="1"/>
+            <enum name="NORMAL" value="0"/>
+        </attr>
+        <attr name="form_edit_max_length" format="integer" />
+        <attr name="form_background_color" format="color" />
+        <attr name="form_edit_input_type" format="integer">
+            <enum name="TYPE_CLASS_NUMBER" value="0x00000002" />
+            <enum name="TYPE_CLASS_PHONE" value="0x00000003" />
+            <enum name="TYPE_NUMBER_FLAG_DECIMAL" value="0x00002000" />
+        </attr>
+    </declare-styleable>
 
 
 </resources>
