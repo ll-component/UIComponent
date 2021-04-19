@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.ll.uicomponent.EmptyView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:empty_icon="@mipmap/base_ic_empty_goods"
+        app:empty_icon_height="76dp"
+        app:empty_title="文字在图片内_居底部显示"
+        app:empty_title_bottomToBottom_margin="1dp"
+        app:empty_title_topToBottom_icon="false" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.ll.uicomponent.EmptyView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:empty_icon="@mipmap/base_ic_empty_goods"
+        app:empty_icon_height="76dp"
+        app:empty_title="文字在图片下面显示"
+        app:empty_title_topToBottom_icon="true"
+        app:empty_title_topToBottom_margin="10dp" />
+
+</LinearLayout>

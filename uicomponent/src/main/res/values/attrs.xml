@@ -3,8 +3,7 @@
 
     <declare-styleable name="EmptyView">
         <attr name="empty_title" format="string" />
-        <attr name="empty_title_margin_bottom" format="dimension" />
-        <attr name="empty_icon_width" format="dimension"/>
+        <attr name="empty_icon_width" format="dimension" />
         <attr name="empty_icon_height" format="dimension">
             <enum name="fill_parent" value="-1" />
             <!-- The view should be as big as its parent (minus padding).
@@ -13,8 +12,10 @@
             <!-- The view should be only big enough to enclose its content (plus padding). -->
             <enum name="wrap_content" value="-2" />
         </attr>
-        <attr name="empty_icon" format="reference"/>
-        <attr name="empty_title_topToBottom_icon" format="boolean"/>
+        <attr name="empty_icon" format="reference" />
+        <attr name="empty_title_topToBottom_margin" format="dimension" />
+        <attr name="empty_title_bottomToBottom_margin" format="dimension" />
+        <attr name="empty_title_topToBottom_icon" format="boolean" />
     </declare-styleable>
 
 

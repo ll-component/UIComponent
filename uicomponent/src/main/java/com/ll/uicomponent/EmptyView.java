@@ -75,20 +75,24 @@ public class EmptyView extends ConstraintLayout {
             icon.setLayoutParams(iconParams);
 
             String title = ta.getString(R.styleable.EmptyView_empty_title);
-            int marginBottom = (int) ta.getDimension(R.styleable.EmptyView_empty_title_margin_bottom, 10);
+
             TextView textView = view.findViewById(R.id.title);
             textView.setText(title);
             boolean empty_title_topToBottom_icon = ta.getBoolean(R.styleable.EmptyView_empty_title_topToBottom_icon, false);
+            int bottomToBottom_margin = (int) ta.getDimension(R.styleable.EmptyView_empty_title_bottomToBottom_margin, 10);
+            int topToBottom_margin = (int) ta.getDimension(R.styleable.EmptyView_empty_title_topToBottom_margin, 10);
 
             ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
             params.startToStart = R.id.icon;
             params.endToEnd = R.id.icon;
-            params.bottomMargin = marginBottom;
+
             if (empty_title_topToBottom_icon) {
                 params.topToBottom = R.id.icon;
+                params.topMargin = topToBottom_margin;
             } else {
                 params.bottomToBottom = R.id.icon;
+                params.bottomMargin = bottomToBottom_margin;
             }
             textView.setLayoutParams(params);
             ta.recycle();
