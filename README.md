@@ -19,3 +19,32 @@
 | empty_title_topToBottom_icon | boolean | 文字相对于图标是否使用topToBottom属性，默认false，即bottomToBottom |
 | empty_title_topToBottom_margin | dimension | 文字相对于图标topToBottom属性时，二者之间的间距 |
 | empty_title_bottomToBottom_margin | dimension | 文字相对于图标bottomToBottom属性时，二者之间的间距 |
+
+# FormView
+表单输入项
+## 属性表格
+| name | format | description |
+| ------ | ------ | ------ |
+| form_name | string | 表单名称 |
+| form_name_text_size | dimension | 名称字体大小 |
+| form_name_text_color | color | 名称字体颜色 |
+| form_name_text_style | enum | 名称字体风格（BOLD、NORMAL），默认BOLD |
+| form_unit | string | 表单输入框后的单位（人、元、张等等）|
+| form_unit_text_size | dimension | 单位字体大小 |
+| form_unit_text_color | color | 单位字体颜色 |
+| form_end_icon | reference | 表单输入框后的图标显示（默认显示右箭头图标且隐藏），xml中设置了就会visible |
+| form_bottom_line_gone | boolean | 整个表单底部的分割线，默认true，即不隐藏 |
+| form_bottom_line_color | color | 分割线颜色 |
+| form_bottom_line_margin_start | dimension | 分割线距起始位置的间距 |
+| form_edit_hint | string | 默认显示文字 |
+| form_edit_input_enable | boolean | 设置表单是否可输入，默认true，false时，父控件将会拦截触摸事件 |
+| form_edit_hint_color | color | 默认文字的字体颜色 |
+| form_edit_text_size | dimension | 输入框字体大小 |
+| form_edit_text_color | color | 输入框字体颜色|
+| form_edit_text | string | 输入框显示文字 |
+| form_edit_text_style | enum | 输入框文字字体风格（BOLD、NORMAL），默认NORMAL |
+| form_edit_max_length | integer | 输入框字数限制 |
+| form_edit_input_type | integer | 输入框可输入的文字类型（TYPE_CLASS_NUMBER、TYPE_CLASS_PHONE、TYPE_NUMBER_FLAG_DECIMAL） |
+| form_background_color | color | 整个表单的背景色 |
+
+
