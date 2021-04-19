@@ -3,3 +3,5 @@
 
 ## EmptyView
 空数据视图-（图标加文字描述）
+
+![空视图预览](https://github.com/ll-component/private-img/blob/master/empty_view_preview.png)
