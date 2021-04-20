@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".example.EmptyViewExampleActivity">
+
+    <com.ll.uicomponent.EmptyView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:empty_icon="@mipmap/base_ic_empty_money"
+        app:empty_icon_height="90dp"
+        app:empty_title="文字在图片内_居底部显示"
+        app:empty_title_bottomToBottom_margin="1dp"
+        app:empty_title_topToBottom_icon="false" />
+
+    <com.ll.uicomponent.EmptyView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:empty_icon="@mipmap/base_ic_empty_money"
+        app:empty_icon_height="90dp"
+        app:empty_title="文字在图片下面显示"
+        app:empty_title_topToBottom_icon="true"
+        app:empty_title_topToBottom_margin="10dp" />
+</LinearLayout>

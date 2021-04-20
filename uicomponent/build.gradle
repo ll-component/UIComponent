@@ -33,9 +33,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+
 }
 
-String versionName = "1.1.4"
+String versionName = "1.1.5"
 String outPutPath = "file:///Users/gongxiaoyun/Documents/custom-component-aar"
 
 ext {

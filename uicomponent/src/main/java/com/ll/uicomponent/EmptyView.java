@@ -70,7 +70,7 @@ public class EmptyView extends ConstraintLayout {
             iconParams.startToStart = 0;
             iconParams.endToEnd = 0;
 
-            int resourceId = ta.getResourceId(R.styleable.EmptyView_empty_icon, R.mipmap.base_ic_empty_goods);
+            int resourceId = ta.getResourceId(R.styleable.EmptyView_empty_icon, R.mipmap.base_ic_empty_money);
             icon.setBackgroundResource(resourceId);
             icon.setLayoutParams(iconParams);
 

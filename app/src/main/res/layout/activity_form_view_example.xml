@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".example.FormViewExampleActivity">
+    <com.ll.uicomponent.FormView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:form_name="手机号"
+        app:form_edit_hint="请输入手机号"
+        app:form_edit_input_type="TYPE_CLASS_PHONE"
+        />
+
+    <com.ll.uicomponent.FormView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:form_name="    人数"
+        app:form_edit_hint="请输入人数"
+        app:form_unit="人"
+        app:form_edit_input_type="TYPE_CLASS_PHONE"
+        />
+
+    <com.ll.uicomponent.FormView
+        android:id="@+id/choose"
+        android:onClick="onClick"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:form_name="    地区"
+        app:form_edit_hint="请选择地区"
+        app:form_end_icon="@mipmap/base_ic_arrow_right_gray"
+        app:form_edit_input_type="TYPE_CLASS_PHONE"
+        app:form_edit_input_enable="false"
+        />
+
+    <com.ll.uicomponent.FormView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:form_name="推流平台"
+        app:form_name_text_style="NORMAL"
+        app:form_edit_text="抖音"
+        app:form_edit_text_style="BOLD"
+        app:form_edit_input_type="TYPE_CLASS_PHONE"
+        app:form_bottom_line_margin_start="15dp" />
+</LinearLayout>

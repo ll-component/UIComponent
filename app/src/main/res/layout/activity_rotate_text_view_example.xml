@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".example.RotateTextViewExampleActivity">
+
+    <com.ll.uicomponent.RotateTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RotateTextView"
+        app:rt_degrees="30"/>
+
+    <com.ll.uicomponent.RotateTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RotateTextView"
+        app:rt_degrees="45"/>
+
+
+    <com.ll.uicomponent.RotateTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RotateTextView"
+        app:rt_degrees="90"/>
+
+    <com.ll.uicomponent.RotateTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RotateTextView"
+        app:rt_degrees="120"/>
+
+    <com.ll.uicomponent.RotateTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RotateTextView"
+        app:rt_degrees="180"/>
+
+    <com.ll.uicomponent.RotateTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RotateTextView"
+        app:rt_degrees="270"/>
+</LinearLayout>

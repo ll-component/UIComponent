@@ -5,243 +5,67 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:padding="14dp"
     tools:context=".MainActivity">
 
-    <com.ll.uicomponent.EmptyView
+    <com.ll.uicomponent.ShapeTextView
+        android:id="@+id/emptyView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:empty_icon="@mipmap/base_ic_empty_goods"
-        app:empty_icon_height="76dp"
-        app:empty_title="文字在图片内_居底部显示"
-        app:empty_title_bottomToBottom_margin="1dp"
-        app:empty_title_topToBottom_icon="false" />
-
-    <com.ll.uicomponent.EmptyView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:empty_icon="@mipmap/base_ic_empty_goods"
-        app:empty_icon_height="76dp"
-        app:empty_title="文字在图片下面显示"
-        app:empty_title_topToBottom_icon="true"
-        app:empty_title_topToBottom_margin="10dp" />
-
-    <com.ll.uicomponent.FormView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:form_name="手机号"
-        app:form_edit_hint="请输入手机号"
-        app:form_edit_input_type="TYPE_CLASS_PHONE"
+        android:layout_height="44dp"
+        android:text="EmptyView"
+        android:gravity="center"
+        android:textColor="#ff4b73"
+        app:shapeStrokeWidth="1dp"
+        app:shapeStrokeColor="#ff4b73"
+        app:shapeRadius="60dp"
+        android:onClick="onClick"
         />
-
-    <com.ll.uicomponent.FormView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:form_name="    人数"
-        app:form_edit_hint="请输入人数"
-        app:form_unit="人"
-        app:form_edit_input_type="TYPE_CLASS_PHONE"
-        />
-
-    <com.ll.uicomponent.FormView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:form_name="    地区"
-        app:form_edit_hint="请选择地区"
-        app:form_end_icon="@mipmap/base_ic_arrow_right_gray"
-        app:form_edit_input_type="TYPE_CLASS_PHONE"
-        app:form_edit_input_enable="false"
-        />
-
-    <com.ll.uicomponent.FormView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:form_name="推流平台"
-        app:form_name_text_style="NORMAL"
-        app:form_edit_text="抖音"
-        app:form_edit_text_style="BOLD"
-        app:form_edit_input_type="TYPE_CLASS_PHONE"
-        app:form_bottom_line_margin_start="15dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="#ffffff"
-            android:textSize="16dp"
-            app:shapeRadius="20dp"
-            app:shapeSolidColor="#ff4b73" />
-
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="#ff4b73"
-            android:textSize="16dp"
-            app:shapeRadius="20dp"
-            app:shapeStrokeColor="#ff4b73"
-            app:shapeStrokeWidth="0.5dp" />
-
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="#ff4b73"
-            android:textSize="16dp"
-            app:shapeStrokeColor="#ff4b73"
-            app:shapeStrokeWidth="1dp"
-            app:shapeTopLeftRadius="20dp" />
-
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="#ff4b73"
-            android:textSize="16dp"
-            app:shapeStrokeColor="#ff4b73"
-            app:shapeStrokeWidth="1dp"
-            app:shapeTopLeftRadius="8dp"
-            app:shapeTopRightRadius="8dp" />
-
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="#ff4b73"
-            android:textSize="16dp"
-            app:shapeBottomLeftRadius="8dp"
-            app:shapeBottomRightRadius="8dp"
-            app:shapeStrokeColor="#ff4b73"
-            app:shapeStrokeWidth="1dp" />
-
-    </LinearLayout>
 
     <com.ll.uicomponent.ShapeTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:paddingStart="8dp"
-        android:paddingTop="2dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="2dp"
-        android:text="button"
-        android:textColor="#ffffff"
-        android:textSize="16dp"
-        app:shapeEndColor="@color/colorAccent"
-        app:shapeRadius="20dp"
-        app:shapeStartColor="@color/colorPrimary" />
-
-    <LinearLayout
+        android:id="@+id/formView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
+        android:text="FormView"
+        android:gravity="center"
+        android:textColor="#ff4b73"
+        app:shapeStrokeWidth="1dp"
+        app:shapeStrokeColor="#ff4b73"
+        app:shapeRadius="60dp"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:onClick="onClick"
+        />
 
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="@color/colorAccent"
-            android:textSize="16dp"
-            app:shapeColorOrientation="LEFT_RIGHT"
-            app:shapeRadius="20dp"
-            app:shapeStrokeWidth="0.5dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent" />
+    <com.ll.uicomponent.ShapeTextView
+        android:id="@+id/shapeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:textColor="#ff4b73"
+        android:text="ShapeTextView"
+        android:gravity="center"
+        app:shapeStrokeWidth="1dp"
+        app:shapeStrokeColor="#ff4b73"
+        app:shapeRadius="60dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        />
 
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="@color/colorAccent"
-            android:textSize="16dp"
-            app:shapeColorOrientation="TOP_BOTTOM"
-            app:shapeRadius="20dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent" />
+    <com.ll.uicomponent.ShapeTextView
+        android:id="@+id/rotateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:textColor="#ff4b73"
+        android:text="RotateTextView"
+        android:gravity="center"
+        app:shapeStrokeWidth="1dp"
+        app:shapeStrokeColor="#ff4b73"
+        app:shapeRadius="60dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        />
 
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="@color/colorAccent"
-            android:textSize="16dp"
-            app:shapeColorOrientation="BOTTOM_TOP"
-            app:shapeRadius="20dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent" />
 
-        <com.ll.uicomponent.ShapeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:paddingStart="8dp"
-            android:paddingTop="2dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="2dp"
-            android:text="button"
-            android:textColor="@color/colorAccent"
-            android:textSize="16dp"
-            app:shapeColorOrientation="RIGHT_LEFT"
-            app:shapeRadius="20dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent" />
-    </LinearLayout>
+
+
+
 
 </LinearLayout>

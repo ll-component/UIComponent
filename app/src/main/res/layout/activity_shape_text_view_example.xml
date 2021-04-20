@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".example.ShapeTextViewExampleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            app:shapeRadius="20dp"
+            app:shapeSolidColor="#ff4b73" />
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="#ff4b73"
+            android:textSize="16dp"
+            app:shapeRadius="20dp"
+            app:shapeStrokeColor="#ff4b73"
+            app:shapeStrokeWidth="0.5dp" />
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="#ff4b73"
+            android:textSize="16dp"
+            app:shapeStrokeColor="#ff4b73"
+            app:shapeStrokeWidth="1dp"
+            app:shapeTopLeftRadius="20dp" />
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="#ff4b73"
+            android:textSize="16dp"
+            app:shapeStrokeColor="#ff4b73"
+            app:shapeStrokeWidth="1dp"
+            app:shapeTopLeftRadius="8dp"
+            app:shapeTopRightRadius="8dp" />
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="#ff4b73"
+            android:textSize="16dp"
+            app:shapeBottomLeftRadius="8dp"
+            app:shapeBottomRightRadius="8dp"
+            app:shapeStrokeColor="#ff4b73"
+            app:shapeStrokeWidth="1dp" />
+
+    </LinearLayout>
+
+    <com.ll.uicomponent.ShapeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="2dp"
+        android:text="button"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        app:shapeEndColor="@color/colorAccent"
+        app:shapeRadius="20dp"
+        app:shapeStartColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
+            app:shapeColorOrientation="LEFT_RIGHT"
+            app:shapeRadius="20dp"
+            app:shapeStrokeEndColor="@color/colorPrimary"
+            app:shapeStrokeStartColor="@color/colorAccent"
+            app:shapeStrokeWidth="0.5dp" />
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
+            app:shapeColorOrientation="TOP_BOTTOM"
+            app:shapeRadius="20dp"
+            app:shapeStrokeEndColor="@color/colorPrimary"
+            app:shapeStrokeStartColor="@color/colorAccent" />
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
+            app:shapeColorOrientation="BOTTOM_TOP"
+            app:shapeRadius="20dp"
+            app:shapeStrokeEndColor="@color/colorPrimary"
+            app:shapeStrokeStartColor="@color/colorAccent" />
+
+        <com.ll.uicomponent.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="button"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
+            app:shapeColorOrientation="RIGHT_LEFT"
+            app:shapeRadius="20dp"
+            app:shapeStrokeEndColor="@color/colorPrimary"
+            app:shapeStrokeStartColor="@color/colorAccent" />
+    </LinearLayout>
+</LinearLayout>
