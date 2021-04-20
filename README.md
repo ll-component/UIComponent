@@ -6,7 +6,7 @@
 空数据视图-（图标加文字描述）
 继承于ConstraintLayout
 
-![空视图预览](https://github.com/ll-component/private-img/blob/master/empty_view_preview.png)
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165305.jpg" width = "360" height = "720" alt="" align=center />
 
 ## 属性表格
 
