@@ -26,7 +26,7 @@
 | empty_title_bottomToBottom_margin | dimension | 文字相对于图标bottomToBottom属性时，二者之间的间距 |
 
 # FormView
-表单输入项
+表单输入项，一般用于商品添加，个人信息编辑等场景，也可禁用掉输入框当做普通的菜单入口项，禁用的话设置form_edit_input_enable属性为false，这时parent会拦截触摸事件
 
 <img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165244.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
