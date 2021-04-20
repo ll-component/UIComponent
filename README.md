@@ -66,18 +66,18 @@
 | name | format | description |
 | ------ | ------ | ------ |
 | shape | integer | RECTANGLE、OVAL |
-| shapeRadius | dimension | RECTANGLE、OVAL |
-| shapeTopLeftRadius | dimension | RECTANGLE、OVAL |
-| shapeTopRightRadius | dimension | RECTANGLE、OVAL |
-| shapeBottomLeftRadius | dimension | RECTANGLE、OVAL |
-| shapeBottomRightRadius | dimension | RECTANGLE、OVAL |
-| shapeStrokeWidth | dimension | RECTANGLE、OVAL |
-| shapeSolidColor | color | RECTANGLE、OVAL |
-| shapeStrokeColor | color | RECTANGLE、OVAL |
-| shapeStrokeStartColor | color | RECTANGLE、OVAL |
-| shapeStrokeEndColor | color | RECTANGLE、OVAL |
-| shapeStartColor | color | RECTANGLE、OVAL |
-| shapeEndColor | color | RECTANGLE、OVAL |
-| shapeColorOrientation | integer | RECTANGLE、OVAL |
+| shapeRadius | dimension | 圆角大小 |
+| shapeTopLeftRadius | dimension | 左上角圆角大小 |
+| shapeTopRightRadius | dimension | 右上角圆角大小 |
+| shapeBottomLeftRadius | dimension | 左下角圆角大小 |
+| shapeBottomRightRadius | dimension | 右下角圆角大小 |
+| shapeStrokeWidth | dimension | 设置边框线宽 |
+| shapeSolidColor | color | 背景填充色 |
+| shapeStrokeColor | color | 边框线的颜色 |
+| shapeStrokeStartColor | color | 设置边框渐变色start |
+| shapeStrokeEndColor | color | 设置边框渐变色end |
+| shapeStartColor | color | 设置背景填充渐变色start |
+| shapeEndColor | color | 设置背景填充渐变色end |
+| shapeColorOrientation | integer | 颜色渐变的方向 |
 
 
