@@ -62,7 +62,22 @@
 
 <img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165224.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
-
-
+## 属性表格
+| name | format | description |
+| ------ | ------ | ------ |
+| shape | integer | RECTANGLE、OVAL |
+| shapeRadius | dimension | RECTANGLE、OVAL |
+| shapeTopLeftRadius | dimension | RECTANGLE、OVAL |
+| shapeTopRightRadius | dimension | RECTANGLE、OVAL |
+| shapeBottomLeftRadius | dimension | RECTANGLE、OVAL |
+| shapeBottomRightRadius | dimension | RECTANGLE、OVAL |
+| shapeStrokeWidth | dimension | RECTANGLE、OVAL |
+| shapeSolidColor | color | RECTANGLE、OVAL |
+| shapeStrokeColor | color | RECTANGLE、OVAL |
+| shapeStrokeStartColor | color | RECTANGLE、OVAL |
+| shapeStrokeEndColor | color | RECTANGLE、OVAL |
+| shapeStartColor | color | RECTANGLE、OVAL |
+| shapeEndColor | color | RECTANGLE、OVAL |
+| shapeColorOrientation | integer | RECTANGLE、OVAL |
 
 
