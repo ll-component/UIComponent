@@ -25,6 +25,10 @@
 
 # FormView
 表单输入项
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165244.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
+
 ## 属性表格
 | name | format | description |
 | ------ | ------ | ------ |
