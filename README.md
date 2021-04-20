@@ -6,7 +6,8 @@
 空数据视图-（图标加文字描述）
 继承于ConstraintLayout
 
-<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165305.jpg" width = "360" height = "720" alt="" align=center />
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165305.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
 
 ## 属性表格
 
