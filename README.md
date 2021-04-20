@@ -56,4 +56,13 @@
 | form_edit_input_type | integer | 输入框可输入的文字类型（TYPE_CLASS_NUMBER、TYPE_CLASS_PHONE、TYPE_NUMBER_FLAG_DECIMAL） |
 | form_background_color | color | 整个表单的背景色 |
 
+# ShapeTextView
+
+支持xml直接声明shape背景的TextView
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165224.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
+
+
+
 
