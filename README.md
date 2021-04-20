@@ -80,4 +80,16 @@
 | shapeEndColor | color | 设置背景填充渐变色end |
 | shapeColorOrientation | integer | 颜色渐变的方向 |
 
+# RotateTextView
+
+支持旋转角度的TextView
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165200.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
+## 属性表格
+| name | format | description |
+| ------ | ------ | ------ |
+| rt_degrees | integer | 旋转角度0~360 |
+
+
 
