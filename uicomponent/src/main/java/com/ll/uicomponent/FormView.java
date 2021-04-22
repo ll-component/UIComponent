@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -88,8 +89,19 @@ public class FormView extends ConstraintLayout {
 
             String form_name = ta.getString(R.styleable.FormView_form_name);
             int form_name_text_size = (int) ta.getDimension(R.styleable.FormView_form_name_text_size, 14);
+            int form_name_marginTop = (int) ta.getDimension(R.styleable.FormView_form_name_marginTop, 14);
             int form_name_text_color = ta.getColor(R.styleable.FormView_form_name_text_color, Color.parseColor("#333333"));
             int form_name_text_style = ta.getInteger(R.styleable.FormView_form_name_text_style, Typeface.BOLD);
+            boolean form_name_centerVertical = ta.getBoolean(R.styleable.FormView_form_name_centerVertical, true);
+            ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.topToTop = 0;
+            if (form_name_centerVertical) {
+                params.bottomToBottom = 0;
+            } else {
+                params.topMargin = form_name_marginTop;
+            }
+            tv_name.setLayoutParams(params);
             tv_name.setText(form_name);
             tv_name.setTextSize(form_name_text_size);
             tv_name.setTextColor(form_name_text_color);
@@ -139,14 +151,56 @@ public class FormView extends ConstraintLayout {
             int form_edit_input_type = ta.getInteger(R.styleable.FormView_form_edit_input_type, InputType.TYPE_CLASS_TEXT);
             boolean form_edit_input_enable = ta.getBoolean(R.styleable.FormView_form_edit_input_enable, true);
             int form_edit_text_style = ta.getInteger(R.styleable.FormView_form_edit_text_style, Typeface.NORMAL);
+            int form_edit_paddingTop = (int) ta.getDimension(R.styleable.FormView_form_edit_paddingTop, 14);
             editText.setFocusableInTouchMode(form_edit_input_enable);
             this.form_edit_input_enable = form_edit_input_enable;
+            int form_edit_gravity = ta.getInteger(R.styleable.FormView_form_edit_gravity, 7);
+            switch (form_edit_gravity) {
+                case 0:
+                    editText.setGravity(Gravity.CENTER_VERTICAL);
+                    break;
+                case 1: {
+                    editText.setGravity(Gravity.TOP);
+                    ConstraintLayout.LayoutParams layoutParams1 = (LayoutParams) editText.getLayoutParams();
+                    layoutParams1.topMargin = form_edit_paddingTop;
+                    break;
+                }
+                case 2:
+                    editText.setGravity(Gravity.BOTTOM);
+                    break;
+                case 3:
+                    editText.setGravity(Gravity.START);
+                    break;
+                case 4:
+                    editText.setGravity(Gravity.END);
+                    break;
+                case 5: {
+                    editText.setGravity(Gravity.TOP | Gravity.START);
+                    ConstraintLayout.LayoutParams layoutParams1 = (LayoutParams) editText.getLayoutParams();
+                    layoutParams1.topMargin = form_edit_paddingTop;
+                    break;
+                }
+                case 6:
+                    editText.setGravity(Gravity.CENTER);
+                    break;
+                case 7:
+                    editText.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
+                    break;
+                case 8:
+                    editText.setGravity(Gravity.END | Gravity.CENTER_VERTICAL);
+                    break;
+            }
             editText.setHint(form_edit_hint);
             editText.setHintTextColor(form_edit_hint_color);
             editText.setTextSize(form_edit_text_size);
             editText.setTextColor(form_edit_text_color);
             editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(form_edit_max_length)});
-            editText.setInputType(form_edit_input_type);
+            if (form_edit_input_type == InputType.TYPE_TEXT_FLAG_MULTI_LINE) {
+                editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+            } else {
+                editText.setInputType(form_edit_input_type);
+            }
+
             editText.setTypeface(Typeface.create(Typeface.DEFAULT, form_edit_text_style));
             editText.setText(form_edit_text);
             int form_background_color = ta.getColor(R.styleable.FormView_form_background_color, -1);

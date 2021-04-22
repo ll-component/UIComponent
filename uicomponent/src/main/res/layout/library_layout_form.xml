@@ -24,7 +24,7 @@
         android:layout_marginEnd="15dp"
         android:background="@null"
         android:hint="请输入发放数量"
-        android:inputType="number"
+        android:minLines="3"
         android:textColorHint="#CCCCCC"
         android:textSize="14dp"
         app:layout_constraintTop_toTopOf="parent"

@@ -38,7 +38,7 @@ dependencies {
 
 }
 
-String versionName = "1.1.5"
+String versionName = "1.1.6"
 String outPutPath = "file:///Users/gongxiaoyun/Documents/custom-component-aar"
 
 ext {

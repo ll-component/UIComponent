@@ -20,11 +20,13 @@
 
     <declare-styleable name="FormView">
         <attr name="form_name" format="string" />
+        <attr name="form_name_centerVertical" format="boolean" />
+        <attr name="form_name_marginTop" format="dimension" />
         <attr name="form_name_text_size" format="dimension" />
         <attr name="form_name_text_color" format="color" />
         <attr name="form_name_text_style" format="enum">
-            <enum name="BOLD" value="1"/>
-            <enum name="NORMAL" value="0"/>
+            <enum name="BOLD" value="1" />
+            <enum name="NORMAL" value="0" />
         </attr>
         <attr name="form_unit" format="string" />
         <attr name="form_unit_text_size" format="dimension" />
@@ -34,6 +36,18 @@
         <attr name="form_bottom_line_color" format="color" />
         <attr name="form_bottom_line_gone" format="boolean" />
         <attr name="form_edit_hint" format="string" />
+        <attr name="form_edit_paddingTop" format="dimension" />
+        <attr name="form_edit_gravity" format="enum">
+            <enum name="CENTER_VERTICAL" value="0" />
+            <enum name="TOP" value="1" />
+            <enum name="BOTTOM" value="2" />
+            <enum name="START" value="3" />
+            <enum name="END" value="4" />
+            <enum name="TOP_START" value="5" />
+            <enum name="CENTER" value="6" />
+            <enum name="START_CENTER_VERTICAL" value="7" />
+            <enum name="END_CENTER_VERTICAL" value="8" />
+        </attr>
         <attr name="form_edit_input_enable" format="boolean" />
         <attr name="form_edit_hint_color" format="color" />
         <attr name="form_edit_text_size" format="dimension" />
@@ -49,6 +63,7 @@
             <enum name="TYPE_CLASS_NUMBER" value="0x00000002" />
             <enum name="TYPE_CLASS_PHONE" value="0x00000003" />
             <enum name="TYPE_NUMBER_FLAG_DECIMAL" value="0x00002000" />
+            <enum name="TYPE_TEXT_FLAG_MULTI_LINE" value="0x00020000"/>
         </attr>
     </declare-styleable>
 
