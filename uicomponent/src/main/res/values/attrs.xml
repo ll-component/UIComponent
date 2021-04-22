@@ -32,9 +32,10 @@
         <attr name="form_unit_text_size" format="dimension" />
         <attr name="form_unit_text_color" format="color" />
         <attr name="form_end_icon" format="reference" />
-        <attr name="form_bottom_line_margin_start" format="dimension" />
         <attr name="form_bottom_line_color" format="color" />
         <attr name="form_bottom_line_gone" format="boolean" />
+        <attr name="form_bottom_line_startToStart_edit" format="boolean" />
+
         <attr name="form_edit_hint" format="string" />
         <attr name="form_edit_paddingTop" format="dimension" />
         <attr name="form_edit_gravity" format="enum">

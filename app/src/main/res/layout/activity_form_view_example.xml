@@ -48,5 +48,19 @@
         app:form_edit_text="抖音"
         app:form_edit_text_style="BOLD"
         app:form_edit_paddingTop="14dp"
-        app:form_bottom_line_margin_start="15dp" />
+        app:form_bottom_line_color="@color/colorAccent" />
+
+    <com.ll.uicomponent.FormView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:form_name_marginTop="14dp"
+        app:form_name="推流平台"
+        app:form_name_text_style="NORMAL"
+        app:form_edit_text="抖音"
+        app:form_edit_text_style="BOLD"
+        app:form_edit_paddingTop="14dp"
+        android:paddingStart="15dp"
+        app:form_bottom_line_startToStart_edit="false"
+        app:form_bottom_line_color="@color/colorAccent" />
 </LinearLayout>

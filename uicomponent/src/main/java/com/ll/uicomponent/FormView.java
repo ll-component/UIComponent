@@ -86,7 +86,6 @@ public class FormView extends ConstraintLayout {
 
         if (attrs != null) {
             TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.FormView);
-
             String form_name = ta.getString(R.styleable.FormView_form_name);
             int form_name_text_size = (int) ta.getDimension(R.styleable.FormView_form_name_text_size, 14);
             int form_name_marginTop = (int) ta.getDimension(R.styleable.FormView_form_name_marginTop, 14);
@@ -125,19 +124,19 @@ public class FormView extends ConstraintLayout {
                 img_end_icon.setImageDrawable(form_end_icon);
             }
 
-            int form_bottom_line_margin_start = (int) ta.getDimension(R.styleable.FormView_form_bottom_line_margin_start, -1);
-            int form_bottom_line_color = ta.getColor(R.styleable.FormView_form_unit_text_color, Color.parseColor("#E0E0E0"));
+            int form_bottom_line_color = ta.getColor(R.styleable.FormView_form_bottom_line_color, Color.parseColor("#E0E0E0"));
             boolean form_bottom_line_gone = ta.getBoolean(R.styleable.FormView_form_bottom_line_gone, false);
-
+            // 分割线相对于输入框是否使用startToStart属性，默认true
+            boolean form_bottom_line_startToStart_edit = ta.getBoolean(R.styleable.FormView_form_bottom_line_startToStart_edit, true);
             ConstraintLayout.LayoutParams layoutParams = (LayoutParams) bottom_line.getLayoutParams();
-            if (form_bottom_line_margin_start > 0) {
-                layoutParams.startToStart = 0;
-                layoutParams.setMarginStart(form_bottom_line_margin_start);
-            } else {
+            if (form_bottom_line_startToStart_edit) {
                 layoutParams.startToStart = R.id.edit;
                 layoutParams.endToEnd = R.id.edit;
-                layoutParams.width = 0;
+            } else {
+                layoutParams.startToStart = 0;
+                layoutParams.endToEnd = 0;
             }
+            layoutParams.width = 0;
             bottom_line.setLayoutParams(layoutParams);
             bottom_line.setBackgroundColor(form_bottom_line_color);
             bottom_line.setVisibility(form_bottom_line_gone ? GONE : VISIBLE);
