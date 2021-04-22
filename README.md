@@ -1,12 +1,17 @@
 # CustomComponent
-自定义组件（空视图、标题、表单输入项、设置项、菜单项、按钮、文字），我们项目开发中有时候可能会同时维护多个项目，而这些项目间又有很多相似的UI组件，如果从0到1一个个编写或者写本地自定义view，将会浪费大量时间和精力，所以将这些组件发布到公共仓库统一维护和依赖，旨在让我们专注于功能开发，毕竟写UI很枯燥，而且对自身的技术也没有任何提升。这些组件有直接继承view绘制的，也有继承系统组件进行二次开发的，项目中的不足，广大前辈们可随时提Issues。
+自定义组件（空视图、标题、表单输入项、设置项、菜单项、按钮、文字），我们项目开发中有时候可能会同时维护多个项目，而这些项目间又有很多相似的UI组件，如果从0到1一个个编写或者写本地自定义view，将会浪费大量时间和精力，所以将这些组件发布到公共仓库统一维护和依赖，旨在让我们专注于功能开发，毕竟写UI很枯燥，而且对自身的技术也没有任何提升。这些组件有直接继承view绘制的，也有继承系统组件进行二次开发的。组件后续会一直进行增加……
+
+图片加载失败的话可以到gitee查看 [https://gitee.com/dayun220/UIComponent](https://gitee.com/dayun220/UIComponent)
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165330.jpg" width="360" height="720" alt="菜单预览"/><br/>
 
 
 # EmptyView
 空数据视图-（图标加文字描述）
 继承于ConstraintLayout
 
-![空视图预览](https://github.com/ll-component/private-img/blob/master/empty_view_preview.png)
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165305.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
 
 ## 属性表格
 
@@ -21,7 +26,11 @@
 | empty_title_bottomToBottom_margin | dimension | 文字相对于图标bottomToBottom属性时，二者之间的间距 |
 
 # FormView
-表单输入项
+表单输入项，一般用于商品添加，个人信息编辑等场景，也可禁用掉输入框当做普通的菜单入口项，禁用的话设置form_edit_input_enable属性为false，这时parent会拦截触摸事件
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165244.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
+
 ## 属性表格
 | name | format | description |
 | ------ | ------ | ------ |
@@ -46,5 +55,41 @@
 | form_edit_max_length | integer | 输入框字数限制 |
 | form_edit_input_type | integer | 输入框可输入的文字类型（TYPE_CLASS_NUMBER、TYPE_CLASS_PHONE、TYPE_NUMBER_FLAG_DECIMAL） |
 | form_background_color | color | 整个表单的背景色 |
+
+# ShapeTextView
+
+支持xml直接声明shape背景的TextView
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165224.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
+## 属性表格
+| name | format | description |
+| ------ | ------ | ------ |
+| shape | integer | RECTANGLE、OVAL |
+| shapeRadius | dimension | 圆角大小 |
+| shapeTopLeftRadius | dimension | 左上角圆角大小 |
+| shapeTopRightRadius | dimension | 右上角圆角大小 |
+| shapeBottomLeftRadius | dimension | 左下角圆角大小 |
+| shapeBottomRightRadius | dimension | 右下角圆角大小 |
+| shapeStrokeWidth | dimension | 设置边框线宽 |
+| shapeSolidColor | color | 背景填充色 |
+| shapeStrokeColor | color | 边框线的颜色 |
+| shapeStrokeStartColor | color | 设置边框渐变色start |
+| shapeStrokeEndColor | color | 设置边框渐变色end |
+| shapeStartColor | color | 设置背景填充渐变色start |
+| shapeEndColor | color | 设置背景填充渐变色end |
+| shapeColorOrientation | integer | 颜色渐变的方向 |
+
+# RotateTextView
+
+支持旋转角度的TextView
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165200.jpg" width="360" height="720" alt="空数据视图"/><br/>
+
+## 属性表格
+| name | format | description |
+| ------ | ------ | ------ |
+| rt_degrees | integer | 旋转角度0~360 |
+
 
 
