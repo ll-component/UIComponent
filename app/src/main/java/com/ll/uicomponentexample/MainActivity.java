@@ -6,10 +6,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ll.uicomponent.RotateTextView;
 import com.ll.uicomponentexample.example.EmptyViewExampleActivity;
 import com.ll.uicomponentexample.example.FormViewExampleActivity;
 import com.ll.uicomponentexample.example.RotateTextViewExampleActivity;
+import com.ll.uicomponentexample.example.ClearEditTextViewExampleActivity;
 import com.ll.uicomponentexample.example.ShapeTextViewExampleActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
     @Override
@@ -33,8 +32,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.shapeTextView:// shape文本
                 startActivity(new Intent(this, ShapeTextViewExampleActivity.class));
                 break;
-            case R.id.rotateTextView:// rotateTextView
+            case R.id.rotateTextView:// RotateTextView
                 startActivity(new Intent(this, RotateTextViewExampleActivity.class));
+                break;
+            case R.id.clearEditTextView:// ClearEditTextView
+                startActivity(new Intent(this, ClearEditTextViewExampleActivity.class));
                 break;
         }
     }

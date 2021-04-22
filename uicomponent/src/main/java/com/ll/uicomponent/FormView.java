@@ -33,6 +33,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class FormView extends ConstraintLayout {
 
     private int mParentHeight;
+    private boolean form_edit_input_enable;
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+            return !form_edit_input_enable;
+        }
+        return super.onInterceptTouchEvent(ev);
+    }
 
     public FormView(@NonNull Context context) {
         super(context);
@@ -210,14 +219,5 @@ public class FormView extends ConstraintLayout {
         }
     }
 
-    private boolean form_edit_input_enable;
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            return !form_edit_input_enable;
-        }
-
-        return super.onInterceptTouchEvent(ev);
-    }
 }

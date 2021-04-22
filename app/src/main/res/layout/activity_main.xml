@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:padding="14dp"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <com.ll.uicomponent.ShapeTextView
@@ -64,7 +65,19 @@
         />
 
 
-
+    <com.ll.uicomponent.ShapeTextView
+        android:id="@+id/clearEditTextView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:textColor="#ff4b73"
+        android:text="ClearEditTextView"
+        android:gravity="center"
+        app:shapeStrokeWidth="1dp"
+        app:shapeStrokeColor="#ff4b73"
+        app:shapeRadius="60dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        />
 
 
 

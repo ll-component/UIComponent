@@ -98,4 +98,16 @@
     </declare-styleable>
 
 
+    <declare-styleable name="ClearEditTextView">
+        <attr name="searchClearIcon" format="reference"/>
+        <attr name="searchClearIconWidth" format="dimension"/>
+        <attr name="searchClearIconHeight" format="dimension"/>
+        <attr name="searchStartIcon" format="reference"/>
+        <attr name="searchStartIconWidth" format="dimension"/>
+        <attr name="searchStartIconHeight" format="dimension"/>
+        <attr name="searchBgShapeRadius" format="dimension"/>
+        <attr name="searchBgShapeSolidColor" format="color"/>
+        <attr name="searchBgShapeStrokeWidth" format="dimension"/>
+        <attr name="searchBgShapeStrokeColor" format="color"/>
+    </declare-styleable>
 </resources>
