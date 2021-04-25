@@ -90,12 +90,13 @@ public class FormView extends ConstraintLayout {
     }
 
     private EditText editText;
+    private TextView tv_name, tv_unit;
 
     private void init(Context context, AttributeSet attrs) {
         removeAllViews();
         View view = LayoutInflater.from(context).inflate(R.layout.library_layout_form, this, true);
-        TextView tv_name = view.findViewById(R.id.tv_name);
-        TextView tv_unit = view.findViewById(R.id.tv_unit);
+        tv_name = view.findViewById(R.id.tv_name);
+        tv_unit = view.findViewById(R.id.tv_unit);
         editText = view.findViewById(R.id.edit);
         ImageView img_end_icon = view.findViewById(R.id.img_end_icon);
         View bottom_line = view.findViewById(R.id.bottom_line);
@@ -224,6 +225,14 @@ public class FormView extends ConstraintLayout {
             }
             ta.recycle();
         }
+    }
+
+    public void setFormName(String name) {
+        tv_name.setText(name);
+    }
+
+    public void setFormUnit(String unit) {
+        tv_unit.setText(unit);
     }
 
     @BindingAdapter("form_edit_text")

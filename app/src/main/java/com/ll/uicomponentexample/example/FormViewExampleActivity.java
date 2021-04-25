@@ -25,7 +25,6 @@ public class FormViewExampleActivity extends AppCompatActivity implements View.O
         final FormExampleBean bean = new FormExampleBean();
         bean.setName("Form_Name");
         binding.setData(bean);
-
         binding.lastForm.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
