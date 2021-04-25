@@ -5,9 +5,11 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -21,6 +23,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.databinding.BindingAdapter;
+import androidx.databinding.InverseBindingAdapter;
+import androidx.databinding.InverseBindingListener;
+import androidx.databinding.adapters.ListenerUtil;
+import androidx.databinding.adapters.TextViewBindingAdapter;
 
 /**
  * ProjectName:    Live
@@ -219,5 +226,64 @@ public class FormView extends ConstraintLayout {
         }
     }
 
+    @BindingAdapter("form_edit_text")
+    public static void setValue(FormView formView, String value) {
+        if (formView != null) {
+            String edTextString = formView.editText.getText() == null ? "" : formView.editText.getText().toString();
+            value = value == null ? "" : value;
+            if (edTextString.equalsIgnoreCase(value)) {
+                return;
+            }
+            formView.editText.setText(value);
+        }
+    }
 
+    @InverseBindingAdapter(attribute = "form_edit_text", event = "valueAttrChanged")
+    public static String getValue(FormView formView) {
+        return formView.editText.getText().toString();
+    }
+
+    @BindingAdapter(
+            value = {"android:beforeTextChanged",
+                    "android:onTextChanged",
+                    "android:afterTextChanged",
+                    "valueAttrChanged"},
+            requireAll = false)
+    public static void setTextWatcher(
+            FormView view,
+            final TextViewBindingAdapter.BeforeTextChanged before,
+            final TextViewBindingAdapter.OnTextChanged on,
+            final TextViewBindingAdapter.AfterTextChanged after,
+            final InverseBindingListener valueAttrChanged) {
+        TextWatcher newWatcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                if (before != null) {
+                    before.beforeTextChanged(s, start, count, after);
+                }
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (on != null) {
+                    on.onTextChanged(s, start, before, count);
+                }
+                if (valueAttrChanged != null) {
+                    valueAttrChanged.onChange();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (after != null) {
+                    after.afterTextChanged(s);
+                }
+            }
+        };
+        TextWatcher oldWatcher = ListenerUtil.trackListener(view, newWatcher, R.id.textWatcher);
+        if (oldWatcher != null) {
+            view.editText.removeTextChangedListener(oldWatcher);
+        }
+        view.editText.addTextChangedListener(newWatcher);
+    }
 }

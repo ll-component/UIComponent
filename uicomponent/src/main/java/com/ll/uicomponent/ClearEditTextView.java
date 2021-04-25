@@ -27,11 +27,13 @@ public class ClearEditTextView extends AppCompatEditText implements OnFocusChang
     private boolean hasFocus;
 
     public ClearEditTextView(Context context) {
-        this(context, null);
+        super(context);
+        init(null);
     }
 
     public ClearEditTextView(Context context, AttributeSet attrs) {
-        this(context, attrs, android.R.attr.editTextStyle);
+        super(context, attrs);
+        init(attrs);
     }
 
     public ClearEditTextView(Context context, AttributeSet attrs, int defStyle) {
@@ -78,6 +80,7 @@ public class ClearEditTextView extends AppCompatEditText implements OnFocusChang
             drawable.setCornerRadius(mShapeRadius);
             drawable.setColor(solidColor);
             setBackground(drawable);
+            setPadding(getPaddingLeft(), 0, getPaddingRight(), 0);
         }
 
         setClearIconVisible(false);

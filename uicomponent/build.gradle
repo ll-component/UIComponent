@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -38,7 +37,7 @@ dependencies {
 
 }
 
-String versionName = "1.1.8"
+String versionName = "1.1.9"
 String outPutPath = "file:///Users/gongxiaoyun/Documents/custom-component-aar"
 
 ext {
