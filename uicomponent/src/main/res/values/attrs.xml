@@ -29,6 +29,10 @@
             <enum name="NORMAL" value="0" />
         </attr>
         <attr name="form_unit" format="string" />
+        <attr name="form_unit_text_style" format="enum">
+            <enum name="BOLD" value="1" />
+            <enum name="NORMAL" value="0" />
+        </attr>
         <attr name="form_unit_text_size" format="dimension" />
         <attr name="form_unit_text_color" format="color" />
         <attr name="form_end_icon" format="reference" />

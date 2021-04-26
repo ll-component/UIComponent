@@ -125,6 +125,7 @@ public class FormView extends ConstraintLayout {
 
             String form_unit = ta.getString(R.styleable.FormView_form_unit);
             int form_unit_text_size = (int) ta.getDimension(R.styleable.FormView_form_unit_text_size, 14);
+            int form_unit_text_style = ta.getInteger(R.styleable.FormView_form_unit_text_style, Typeface.BOLD);
             int form_unit_text_color = ta.getColor(R.styleable.FormView_form_unit_text_color, Color.parseColor("#333333"));
             if (!TextUtils.isEmpty(form_unit)) {
                 tv_unit.setText(form_unit);
@@ -132,7 +133,7 @@ public class FormView extends ConstraintLayout {
                 tv_unit.setTextColor(form_unit_text_color);
             }
             tv_unit.setVisibility(TextUtils.isEmpty(form_unit) ? GONE : VISIBLE);
-
+            tv_unit.setTypeface(Typeface.create(Typeface.DEFAULT, form_unit_text_style));
             Drawable form_end_icon = ta.getDrawable(R.styleable.FormView_form_end_icon);
             if (form_end_icon == null) {
                 img_end_icon.setVisibility(GONE);
