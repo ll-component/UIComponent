@@ -8,7 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -127,11 +126,11 @@ public class FormView extends ConstraintLayout {
             int form_unit_text_size = (int) ta.getDimension(R.styleable.FormView_form_unit_text_size, 14);
             int form_unit_text_style = ta.getInteger(R.styleable.FormView_form_unit_text_style, Typeface.BOLD);
             int form_unit_text_color = ta.getColor(R.styleable.FormView_form_unit_text_color, Color.parseColor("#333333"));
-            if (!TextUtils.isEmpty(form_unit)) {
+            if (form_unit != null) {
                 tv_unit.setText(form_unit);
-                tv_unit.setTextSize(form_unit_text_size);
-                tv_unit.setTextColor(form_unit_text_color);
             }
+            tv_unit.setTextSize(form_unit_text_size);
+            tv_unit.setTextColor(form_unit_text_color);
             int form_unit_marginEnd = (int) ta.getDimension(R.styleable.FormView_form_unit_marginEnd, 0);
             ConstraintLayout.LayoutParams unitLayoutParams = (LayoutParams) tv_unit.getLayoutParams();
             unitLayoutParams.setMarginEnd(form_unit_marginEnd);
