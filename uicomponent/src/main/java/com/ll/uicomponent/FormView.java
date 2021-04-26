@@ -238,6 +238,7 @@ public class FormView extends ConstraintLayout {
 
     public void setFormUnit(String unit) {
         tv_unit.setText(unit);
+        tv_unit.setVisibility(VISIBLE);
     }
 
     @BindingAdapter("form_edit_text")
