@@ -136,7 +136,7 @@ public class FormView extends ConstraintLayout {
             ConstraintLayout.LayoutParams unitLayoutParams = (LayoutParams) tv_unit.getLayoutParams();
             unitLayoutParams.setMarginEnd(form_unit_marginEnd);
 
-            tv_unit.setVisibility(TextUtils.isEmpty(form_unit) ? GONE : VISIBLE);
+            tv_unit.setVisibility(form_unit == null ? GONE : VISIBLE);
             tv_unit.setTypeface(Typeface.create(Typeface.DEFAULT, form_unit_text_style));
             Drawable form_end_icon = ta.getDrawable(R.styleable.FormView_form_end_icon);
             if (form_end_icon == null) {
