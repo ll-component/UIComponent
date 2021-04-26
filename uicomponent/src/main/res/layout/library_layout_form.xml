@@ -42,7 +42,8 @@
         android:src="@mipmap/base_ic_arrow_right_gray"
         app:layout_constraintBottom_toBottomOf="@id/edit"
         app:layout_constraintEnd_toEndOf="@id/edit"
-        app:layout_constraintTop_toTopOf="@id/edit" />
+        app:layout_constraintTop_toTopOf="@id/edit"
+        />
 
     <TextView
         android:id="@+id/tv_unit"
@@ -53,7 +54,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/edit"
-        app:layout_constraintEnd_toEndOf="@id/edit"
+        app:layout_constraintEnd_toStartOf="@id/img_end_icon"
         app:layout_constraintTop_toTopOf="@id/edit" />
 
 

@@ -34,6 +34,7 @@
             <enum name="NORMAL" value="0" />
         </attr>
         <attr name="form_unit_text_size" format="dimension" />
+        <attr name="form_unit_marginEnd" format="dimension" />
         <attr name="form_unit_text_color" format="color" />
         <attr name="form_end_icon" format="reference" />
         <attr name="form_bottom_line_color" format="color" />
