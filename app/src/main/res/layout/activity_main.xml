@@ -64,7 +64,6 @@
         android:onClick="onClick"
         />
 
-
     <com.ll.uicomponent.ShapeTextView
         android:id="@+id/clearEditTextView"
         android:layout_width="match_parent"
@@ -76,9 +75,20 @@
         app:shapeStrokeColor="#ff4b73"
         app:shapeRadius="60dp"
         android:layout_marginTop="10dp"
-        android:onClick="onClick"
+        android:onClick="onClick" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示不同色块的InfoBar："
+        android:layout_marginTop="20dp"
         />
 
-
+    <com.ll.uicomponent.ChameleonView
+        android:id="@+id/chameleon"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        app:clShapeRadius="100dp" />
 
 </LinearLayout>

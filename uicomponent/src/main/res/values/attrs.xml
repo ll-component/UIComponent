@@ -69,8 +69,13 @@
             <enum name="TYPE_CLASS_NUMBER" value="0x00000002" />
             <enum name="TYPE_CLASS_PHONE" value="0x00000003" />
             <enum name="TYPE_NUMBER_FLAG_DECIMAL" value="0x00002000" />
-            <enum name="TYPE_TEXT_FLAG_MULTI_LINE" value="0x00020000"/>
+            <enum name="TYPE_TEXT_FLAG_MULTI_LINE" value="0x00020000" />
         </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ChameleonView">
+        <attr name="clShapeRadius" format="dimension" />
+        <attr name="clShapeSolidColor" format="color" />
     </declare-styleable>
 
     <declare-styleable name="ShapeTextView">
