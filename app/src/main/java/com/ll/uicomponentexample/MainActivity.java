@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Color.parseColor("#A833FF"),
                 Color.parseColor("#FFD320"),
                 Color.parseColor("#FF4B73")};
-        float[] childValues = {10.6f, 32.21f, 20.56f};
+        float[] childValues = {40.4f, 10.56f, 20.44f};
         chameleon.setColors(colors, childValues, 100.00f);
         chameleon.bindLifecycleObserver(this);
     }
