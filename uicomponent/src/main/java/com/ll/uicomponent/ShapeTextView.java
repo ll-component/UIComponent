@@ -12,6 +12,7 @@ import android.graphics.Shader;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -90,6 +91,7 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
         mPaint.setStrokeWidth(mStrokeWidth);
     }
 
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -99,6 +101,7 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
         canvas.drawColor(Color.TRANSPARENT);
         canvas.drawRoundRect(mRectF, mShapeRadius, mShapeRadius, mPaint);
     }
+
 
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
@@ -122,24 +125,12 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
                 case 0:
                     orientation = GradientDrawable.Orientation.TOP_BOTTOM;
                     break;
-//                case 1:
-//                    orientation = GradientDrawable.Orientation.TR_BL;
-//                    break;
                 case 2:
                     orientation = GradientDrawable.Orientation.RIGHT_LEFT;
                     break;
-//                case 3:
-//                    orientation = GradientDrawable.Orientation.BR_TL;
-//                    break;
                 case 4:
                     orientation = GradientDrawable.Orientation.BOTTOM_TOP;
                     break;
-//                case 5:
-//                    orientation = GradientDrawable.Orientation.BL_TR;
-//                    break;
-//                case 7:
-//                    orientation = GradientDrawable.Orientation.TL_BR;
-//                    break;
                 default:
                     orientation = GradientDrawable.Orientation.LEFT_RIGHT;
             }
@@ -168,8 +159,22 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
                 }
                 setBackground(drawable);
             }
-
             ta.recycle();
         }
+    }
+
+    public void setShapeSolidColor(@ColorInt int color) {
+        GradientDrawable background = (GradientDrawable) getBackground();
+        background.setColor(color);
+        invalidate();
+    }
+
+    /**
+     * @param radius dp
+     */
+    public void setShapeRadius(int radius) {
+        GradientDrawable background = (GradientDrawable) getBackground();
+        background.setCornerRadius(dp2Px(radius));
+        invalidate();
     }
 }

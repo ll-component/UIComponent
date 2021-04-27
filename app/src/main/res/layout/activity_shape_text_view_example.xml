@@ -14,6 +14,7 @@
         android:orientation="horizontal">
 
         <com.ll.uicomponent.ShapeTextView
+            android:id="@+id/dyn_shape_tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -183,4 +184,15 @@
             app:shapeStrokeEndColor="@color/colorPrimary"
             app:shapeStrokeStartColor="@color/colorAccent" />
     </LinearLayout>
+
+    <com.ll.uicomponent.ShapeTextView
+        android:id="@+id/dyn_shape_tv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        app:shape="OVAL"
+        app:shapeSolidColor="@color/colorPrimary"
+        app:shapeRadius="4dp"
+        />
 </LinearLayout>
