@@ -138,6 +138,7 @@ public class ChameleonView extends View implements LifecycleObserver {
         canvas.clipPath(mClipPath);
         super.onDraw(canvas);
         // draw color
+        if (mPaints == null) return;
         float startLeft = 0;
         for (int i = 0; i < mPaints.size(); i++) {
             float pr = mChildValues[i] / mMaxValue;
