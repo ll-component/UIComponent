@@ -48,6 +48,7 @@
             app:form_name="    地区" />
 
         <com.ll.uicomponent.FormView
+            android:id="@+id/tiktok"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"

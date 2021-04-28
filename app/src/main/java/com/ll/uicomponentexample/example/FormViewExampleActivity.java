@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ObservableArrayList;
 
+import com.ll.uicomponent.FormView;
 import com.ll.uicomponentexample.R;
 import com.ll.uicomponentexample.databinding.ActivityFormViewExampleBinding;
 import com.ll.uicomponentexample.example.bean.FormExampleBean;
@@ -41,6 +42,9 @@ public class FormViewExampleActivity extends AppCompatActivity implements View.O
                 Toast.makeText(FormViewExampleActivity.this, bean.getName(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        FormView tiktok = findViewById(R.id.tiktok);
+        tiktok.setFormInputEnable(false);
     }
 
     @Override

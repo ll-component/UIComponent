@@ -49,6 +49,11 @@ public class FormView extends ConstraintLayout {
         return super.onInterceptTouchEvent(ev);
     }
 
+    public void setFormInputEnable(boolean form_edit_input_enable) {
+        this.form_edit_input_enable = form_edit_input_enable;
+        editText.setFocusableInTouchMode(form_edit_input_enable);
+    }
+
     public FormView(@NonNull Context context) {
         super(context);
         init(context, null);
@@ -169,11 +174,10 @@ public class FormView extends ConstraintLayout {
             int form_edit_text_color = ta.getColor(R.styleable.FormView_form_edit_text_color, Color.parseColor("#333333"));
             int form_edit_max_length = ta.getInteger(R.styleable.FormView_form_edit_max_length, 1000);
             int form_edit_input_type = ta.getInteger(R.styleable.FormView_form_edit_input_type, InputType.TYPE_CLASS_TEXT);
-            boolean form_edit_input_enable = ta.getBoolean(R.styleable.FormView_form_edit_input_enable, true);
+            form_edit_input_enable = ta.getBoolean(R.styleable.FormView_form_edit_input_enable, true);
             int form_edit_text_style = ta.getInteger(R.styleable.FormView_form_edit_text_style, Typeface.NORMAL);
             int form_edit_paddingTop = (int) ta.getDimension(R.styleable.FormView_form_edit_paddingTop, 14);
-            editText.setFocusableInTouchMode(form_edit_input_enable);
-            this.form_edit_input_enable = form_edit_input_enable;
+            setFormInputEnable(form_edit_input_enable);
             int form_edit_gravity = ta.getInteger(R.styleable.FormView_form_edit_gravity, 7);
             switch (form_edit_gravity) {
                 case 0:
