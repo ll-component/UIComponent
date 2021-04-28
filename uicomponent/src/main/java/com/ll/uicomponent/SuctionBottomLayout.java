@@ -57,7 +57,7 @@ public class SuctionBottomLayout extends LinearLayout {
         mRectF = new RectF();
 
         setBackground(null);// 防止在xml中手误设置了背景，这里将背景置空
-        removeAllViews();
+
         View view = new View(getContext());
         view.setBackgroundResource(R.mipmap.ic_line_shadow);
         view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp2Px(5)));
