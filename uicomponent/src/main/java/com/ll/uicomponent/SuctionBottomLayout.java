@@ -82,8 +82,9 @@ public class SuctionBottomLayout extends LinearLayout {
      */
     @Override
     protected void dispatchDraw(Canvas canvas) {
-        super.dispatchDraw(canvas);
+        // 需要在分发之前就绘制好，不然会导致里面的childView全部被遮挡
         canvas.drawRoundRect(mRectF, 0.0f, 0.0f, mPaint);
+        super.dispatchDraw(canvas);
     }
 
     @Override

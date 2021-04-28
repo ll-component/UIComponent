@@ -118,8 +118,24 @@
 
     <com.ll.uicomponent.SuctionBottomLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:layout_marginTop="10dp"
-        />
+        android:orientation="vertical"
+        >
+        <com.ll.uicomponent.ShapeTextView
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:text="升级云存储空间"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:shapeEndColor="#FF3682"
+            app:shapeRadius="20dp"
+            app:shapeStartColor="#FF6064" />
+    </com.ll.uicomponent.SuctionBottomLayout>
 
 </LinearLayout>
