@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:padding="14dp"
-    android:background="#FFFFFF"
+    android:background="#f5f5f5"
     tools:context=".MainActivity">
 
     <com.ll.uicomponent.ShapeTextView
@@ -20,7 +19,9 @@
         app:shapeStrokeColor="#ff4b73"
         app:shapeRadius="60dp"
         android:onClick="onClick"
-        />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp" />
 
     <com.ll.uicomponent.ShapeTextView
         android:id="@+id/formView"
@@ -34,7 +35,8 @@
         app:shapeRadius="60dp"
         android:layout_marginTop="10dp"
         android:onClick="onClick"
-        />
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp" />
 
     <com.ll.uicomponent.ShapeTextView
         android:id="@+id/shapeTextView"
@@ -48,7 +50,8 @@
         app:shapeRadius="60dp"
         android:layout_marginTop="10dp"
         android:onClick="onClick"
-        />
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp" />
 
     <com.ll.uicomponent.ShapeTextView
         android:id="@+id/rotateTextView"
@@ -62,7 +65,8 @@
         app:shapeRadius="60dp"
         android:layout_marginTop="10dp"
         android:onClick="onClick"
-        />
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp" />
 
     <com.ll.uicomponent.ShapeTextView
         android:id="@+id/clearEditTextView"
@@ -75,6 +79,8 @@
         app:shapeStrokeColor="#ff4b73"
         app:shapeRadius="60dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:onClick="onClick" />
 
     <TextView
@@ -82,6 +88,9 @@
         android:layout_height="wrap_content"
         android:text="显示不同色块的InfoBar："
         android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+
         />
 
     <com.ll.uicomponent.ChameleonView
@@ -89,6 +98,28 @@
         android:layout_width="match_parent"
         android:layout_height="12dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         app:clShapeRadius="9dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="吸底并带顶部阴影的Layout："
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        />
+
+    <com.ll.uicomponent.SuctionBottomLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        />
 
 </LinearLayout>
