@@ -3,14 +3,14 @@
 
 图片加载失败的话可以到gitee查看 [https://gitee.com/dayun220/UIComponent](https://gitee.com/dayun220/UIComponent)
 
-<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165330.jpg" width="360" height="720" alt="菜单预览"/><br/>
+<img src="https://gitee.com/dayun220/private-img/raw/master/00.jpg" width="360" height="720" alt="菜单预览"/><br/>
 
 
 # EmptyView
 空数据视图-（图标加文字描述）
 继承于ConstraintLayout
 
-<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165305.jpg" width="360" height="720" alt="空数据视图"/><br/>
+<img src="https://gitee.com/dayun220/private-img/raw/master/01.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
 
 ## 属性表格
@@ -28,7 +28,7 @@
 # FormView
 表单输入项，一般用于商品添加，个人信息编辑等场景，也可禁用掉输入框当做普通的菜单入口项，禁用的话设置form_edit_input_enable属性为false，这时parent会拦截触摸事件
 
-<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165244.jpg" width="360" height="720" alt="空数据视图"/><br/>
+<img src="https://gitee.com/dayun220/private-img/raw/master/02.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
 
 ## 属性表格
@@ -60,7 +60,7 @@
 
 支持xml直接声明shape背景的TextView
 
-<img src="https://gitee.com/dayun220/private-img/raw/master/IMG_20210420_165224.jpg" width="360" height="720" alt="空数据视图"/><br/>
+<img src="https://gitee.com/dayun220/private-img/raw/master/03.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
 ## 属性表格
 | name | format | description |
