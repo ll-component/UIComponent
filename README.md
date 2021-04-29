@@ -1,7 +1,7 @@
 # CustomComponent
 自定义组件（空视图、标题、表单输入项、设置项、菜单项、按钮、文字），我们项目开发中有时候可能会同时维护多个项目，而这些项目间又有很多相似的UI组件，如果从0到1一个个编写或者写本地自定义view，将会浪费大量时间和精力，所以将这些组件发布到公共仓库统一维护和依赖，旨在让我们专注于功能开发，毕竟写UI很枯燥，而且对自身的技术也没有任何提升。这些组件有直接继承view绘制的，也有继承系统组件进行二次开发的。组件后续会一直进行增加……
 
-图片加载失败的话可以到gitee查看 [https://gitee.com/dayun220/UIComponent](https://gitee.com/dayun220/UIComponent)
+gitee仓库地址： [https://gitee.com/dayun220/UIComponent](https://gitee.com/dayun220/UIComponent)
 
 <img src="https://gitee.com/dayun220/private-img/raw/master/00.jpg" width="360" height="720" alt="菜单预览"/><br/>
 
