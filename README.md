@@ -91,5 +91,24 @@
 | ------ | ------ | ------ |
 | rt_degrees | integer | 旋转角度0~360 |
 
+# ClearEditTextView
+
+带清除按钮的输入框且可xml声明shape背景属性
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/05.jpg" width="360" height="720" alt="输入框"/><br/>
+
+## 属性表格
+| name | format | description |
+| ------ | ------ | ------ |
+| searchClearIcon | reference | 输入框end位置的图标、清除按钮的图标 |
+| searchClearIconWidth | dimension | 上述图标的宽度 |
+| searchClearIconHeight | dimension | 上述图标的高度 |
+| searchStartIcon | reference | 输入框start位置的图标 |
+| searchStartIconWidth | dimension | 上述图标的宽度 |
+| searchStartIconHeight | dimension | 上述图标的高度 |
+| searchBgShapeRadius | dimension | 整个输入框的shape背景圆角大小 |
+| searchBgShapeSolidColor | color | shape背景填充色 |
+| searchBgShapeStrokeWidth | dimension | 设置shape背景的边框线宽 |
+| searchBgShapeStrokeColor | color | 设置shape背景的边框线的颜色 |
 
 
