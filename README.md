@@ -30,6 +30,10 @@
 
 <img src="https://gitee.com/dayun220/private-img/raw/master/02.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
+获取表单的输入框
+```
+formView.getEditText();
+```
 
 ## 属性表格
 | name | format | description |
