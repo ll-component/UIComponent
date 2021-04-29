@@ -3,6 +3,26 @@
 
 gitee仓库地址： [https://gitee.com/dayun220/UIComponent](https://gitee.com/dayun220/UIComponent)
 
+依赖方式：
+
+查看最新版[https://jitpack.io/#ll-component/UIComponent](https://jitpack.io/#ll-component/UIComponent)
+Step 1. add in root build.gradle：
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+Step 2. add the dependency
+```
+dependencies {
+	        implementation 'com.github.ll-component:UIComponent:1.3.2'
+	}
+```
+
 <img src="https://gitee.com/dayun220/private-img/raw/master/00.jpg" width="360" height="720" alt="菜单预览"/><br/>
 
 
