@@ -127,12 +127,12 @@
 使用示例代码：
 
 ```
-// 设置颜色
+        // 设置颜色
         int[] colors = {
                 Color.parseColor("#A833FF"),
                 Color.parseColor("#FFD320"),
                 Color.parseColor("#FF4B73")};
-        // 设置颜色对应的values值
+        // 设置颜色对应的value值
         float[] childValues = {40.4f, 10.56f, 20.44f};
         chameleon.setColors(colors, childValues, 100.00f);
         // 绑定声明周期
