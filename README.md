@@ -10,17 +10,19 @@ gitee仓库地址： [https://gitee.com/dayun220/UIComponent](https://gitee.com/
 Step 1. add in root build.gradle：
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+		
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 Step 2. add the dependency
 ```
 dependencies {
-	        implementation 'com.github.ll-component:UIComponent:1.3.2'
+	        
+	implementation 'com.github.ll-component:UIComponent:1.3.2'
 	}
 ```
 
