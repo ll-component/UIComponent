@@ -39,7 +39,7 @@ formView.getEditText();
 
 获取表单输入框中的内容：
 ```
-String text = formVoew.getInputStr();
+String text = formView.getInputStr();
 ```
 
 设置表单是否可输入：
@@ -160,8 +160,9 @@ formView.setFormUnit("张")
                 Color.parseColor("#FF4B73")};
         // 设置颜色对应的value值
         float[] childValues = {40.4f, 10.56f, 20.44f};
+        // 第三个参数是infobar的总值
         chameleon.setColors(colors, childValues, 100.00f);
-        // 绑定声明周期
+        // 绑定生命周期
         chameleon.bindLifecycleObserver(this);
 ```
 
