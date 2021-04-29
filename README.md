@@ -118,5 +118,9 @@
 
 <img src="https://gitee.com/dayun220/private-img/raw/master/06.jpg" width="360" height="720" alt="ChameleonView"/><br/>
 
-
+## 属性表格
+| name | format | description |
+| ------ | ------ | ------ |
+| clShapeRadius | dimension | 底色背景的圆角大小 |
+| clShapeSolidColor | color | 底色 |
 
