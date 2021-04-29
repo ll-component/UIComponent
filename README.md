@@ -30,29 +30,29 @@
 
 <img src="https://gitee.com/dayun220/private-img/raw/master/02.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
-代码示例
+## 代码示例
 
-获取表单的输入框
+获取表单的输入框：
 ```
 formView.getEditText();
 ```
 
-获取表单输入框中的内容
+获取表单输入框中的内容：
 ```
 String text = formVoew.getInputStr();
 ```
 
-设置表单是否可输入
+设置表单是否可输入：
 ```
 formView.setFormInputEnable(false);
 ```
 
-设置表单的name
+设置表单的name：
 ```
 formView.setFormName("性别")
 ```
 
-设置表单的单位
+设置表单的单位：
 ```
 formView.setFormUnit("张")
 ```
@@ -150,7 +150,7 @@ formView.setFormUnit("张")
 | clShapeRadius | dimension | 底色背景的圆角大小 |
 | clShapeSolidColor | color | 底色 |
 
-使用示例代码：
+## 使用示例代码
 
 ```
         // 设置颜色
