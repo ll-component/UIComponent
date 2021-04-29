@@ -112,5 +112,11 @@
 | searchBgShapeStrokeColor | color | 设置shape背景的边框线的颜色 |
 
 
+# ChameleonView
+
+可显示不同色块的infobar,用于展示存储分类信息、简单数据汇总等场景
+
+<img src="https://gitee.com/dayun220/private-img/raw/master/06.jpg" width="360" height="720" alt="ChameleonView"/><br/>
+
 
 
