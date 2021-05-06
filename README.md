@@ -7,7 +7,7 @@ gitee仓库地址： [https://gitee.com/dayun220/UIComponent](https://gitee.com/
 
 查看最新版[https://jitpack.io/#ll-component/UIComponent](https://jitpack.io/#ll-component/UIComponent)
 
-Step 1. add in root build.gradle：
+Step 1. root build.gradle：
 ```
 allprojects {
 		
@@ -18,7 +18,7 @@ allprojects {
 }
 ```
 
-Step 2. add the dependency
+Step 2. dependency
 ```
 dependencies {
 	        
