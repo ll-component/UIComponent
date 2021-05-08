@@ -5,7 +5,7 @@ gitee仓库地址： [https://gitee.com/dayun220/UIComponent](https://gitee.com/
 
 依赖方式：
 
-最新版本号可查看：[https://github.com/ll-component/UIComponent/releases](最新版本号)
+最新版本号可查看：[https://github.com/ll-component/UIComponent/releases]
 
 Step 1. root build.gradle：
 ```
