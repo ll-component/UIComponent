@@ -81,6 +81,7 @@ public class ClearEditTextView extends AppCompatEditText implements OnFocusChang
             drawable.setColor(solidColor);
             setBackground(drawable);
             setPadding(getPaddingLeft(), 0, getPaddingRight(), 0);
+            ta.recycle();
         }
 
         setClearIconVisible(false);

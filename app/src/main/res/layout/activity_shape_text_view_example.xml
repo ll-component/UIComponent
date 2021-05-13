@@ -109,9 +109,9 @@
         android:text="button"
         android:textColor="#ffffff"
         android:textSize="16dp"
-        app:shapeEndColor="@color/colorAccent"
+        app:shapeEndColor="@color/colorStart"
         app:shapeRadius="20dp"
-        app:shapeStartColor="@color/colorPrimary" />
+        app:shapeStartColor="@color/colorEnd" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -128,12 +128,12 @@
             android:paddingEnd="8dp"
             android:paddingBottom="2dp"
             android:text="button"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorStart"
             android:textSize="16dp"
             app:shapeColorOrientation="LEFT_RIGHT"
             app:shapeRadius="20dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent"
+            app:shapeStrokeEndColor="@color/colorStart"
+            app:shapeStrokeStartColor="@color/colorEnd"
             app:shapeStrokeWidth="0.5dp" />
 
         <com.ll.uicomponent.ShapeTextView
@@ -145,12 +145,12 @@
             android:paddingEnd="8dp"
             android:paddingBottom="2dp"
             android:text="button"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorStart"
             android:textSize="16dp"
             app:shapeColorOrientation="TOP_BOTTOM"
             app:shapeRadius="20dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent" />
+            app:shapeStrokeEndColor="@color/colorEnd"
+            app:shapeStrokeStartColor="@color/colorStart" />
 
         <com.ll.uicomponent.ShapeTextView
             android:layout_width="wrap_content"
@@ -161,12 +161,12 @@
             android:paddingEnd="8dp"
             android:paddingBottom="2dp"
             android:text="button"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorStart"
             android:textSize="16dp"
             app:shapeColorOrientation="BOTTOM_TOP"
             app:shapeRadius="20dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent" />
+            app:shapeStrokeEndColor="@color/colorEnd"
+            app:shapeStrokeStartColor="@color/colorStart" />
 
         <com.ll.uicomponent.ShapeTextView
             android:layout_width="wrap_content"
@@ -177,18 +177,18 @@
             android:paddingEnd="8dp"
             android:paddingBottom="2dp"
             android:text="button"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorStart"
             android:textSize="16dp"
             app:shapeColorOrientation="RIGHT_LEFT"
             app:shapeRadius="20dp"
-            app:shapeStrokeEndColor="@color/colorPrimary"
-            app:shapeStrokeStartColor="@color/colorAccent" />
+            app:shapeStrokeEndColor="@color/colorEnd"
+            app:shapeStrokeStartColor="@color/colorStart" />
     </LinearLayout>
 
     <com.ll.uicomponent.ShapeTextView
         android:id="@+id/dyn_shape_tv"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="15dp"
         app:shape="OVAL"

@@ -6,10 +6,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".example.ClearEditTextViewExampleActivity"></activity>
+        <activity android:name=".example.TouchEventTestActivity"></activity>
+        <activity android:name=".example.ChameleonViewExampleActivity" />
+        <activity android:name=".example.SuctionBottomLayoutExampleActivity" />
+        <activity android:name=".example.ClearEditTextViewExampleActivity" />
         <activity android:name=".example.RotateTextViewExampleActivity" />
         <activity android:name=".example.ShapeTextViewExampleActivity" />
         <activity android:name=".example.FormViewExampleActivity" />

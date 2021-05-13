@@ -73,7 +73,7 @@ public class SuctionBottomLayout extends LinearLayout {
     }
 
     /**
-     * ViewGroup需要自定义绘制时，需要在dispatchDraw方法中进行，下面的onDraw方法只有在设置过ViewGroup
+     * ViewGroup自定义绘制时，需要在dispatchDraw方法中进行，下面的onDraw方法只有在设置过ViewGroup
      * 的背景后才会调用，不然只会默认调用dispatchDraw，
      * 设置过背景  onDraw -- dispatchDraw
      * 没有设置过背景 dispatchDraw
@@ -82,7 +82,7 @@ public class SuctionBottomLayout extends LinearLayout {
      */
     @Override
     protected void dispatchDraw(Canvas canvas) {
-        // 需要在分发之前就绘制好，不然会导致里面的childView全部被遮挡
+        // 需要在分发之前就绘制好，不然会导致childView全部被遮挡
         canvas.drawRoundRect(mRectF, 0.0f, 0.0f, mPaint);
         super.dispatchDraw(canvas);
     }

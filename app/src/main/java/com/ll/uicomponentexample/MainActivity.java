@@ -1,18 +1,20 @@
 package com.ll.uicomponentexample;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ll.uicomponent.ChameleonView;
+import com.ll.uicomponentexample.example.ChameleonViewExampleActivity;
 import com.ll.uicomponentexample.example.ClearEditTextViewExampleActivity;
 import com.ll.uicomponentexample.example.EmptyViewExampleActivity;
 import com.ll.uicomponentexample.example.FormViewExampleActivity;
 import com.ll.uicomponentexample.example.RotateTextViewExampleActivity;
 import com.ll.uicomponentexample.example.ShapeTextViewExampleActivity;
+import com.ll.uicomponentexample.example.SuctionBottomLayoutExampleActivity;
+import com.ll.uicomponentexample.example.TouchEventTestActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,15 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        ChameleonView chameleon = findViewById(R.id.chameleon);
-        int[] colors = {
-                Color.parseColor("#A833FF"),
-                Color.parseColor("#FFD320"),
-                Color.parseColor("#FF4B73")};
-        float[] childValues = {40.4f, 10.56f, 20.44f};
-        chameleon.setColors(colors, childValues, 100.00f);
-        chameleon.bindLifecycleObserver(this);
+        Looper.prepareMainLooper();
     }
 
     @Override
@@ -48,6 +42,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.clearEditTextView:// ClearEditTextView
                 startActivity(new Intent(this, ClearEditTextViewExampleActivity.class));
+                break;
+            case R.id.chameleonView:// chameleonView
+                startActivity(new Intent(this, ChameleonViewExampleActivity.class));
+                break;
+            case R.id.suctionBottomLayout:// suctionBottomLayout
+                startActivity(new Intent(this, SuctionBottomLayoutExampleActivity.class));
+                break;
+            case R.id.touchEventTest:
+                startActivity(new Intent(this, TouchEventTestActivity.class));
                 break;
         }
     }

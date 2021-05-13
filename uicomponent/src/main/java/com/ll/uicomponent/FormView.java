@@ -40,6 +40,8 @@ public class FormView extends ConstraintLayout {
 
     private int mParentHeight;
     private boolean form_edit_input_enable;
+    private EditText editText;
+    private TextView tv_name, tv_unit;
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
@@ -49,10 +51,7 @@ public class FormView extends ConstraintLayout {
         return super.onInterceptTouchEvent(ev);
     }
 
-    public void setFormInputEnable(boolean form_edit_input_enable) {
-        this.form_edit_input_enable = form_edit_input_enable;
-        editText.setFocusableInTouchMode(form_edit_input_enable);
-    }
+
 
     public FormView(@NonNull Context context) {
         super(context);
@@ -69,6 +68,10 @@ public class FormView extends ConstraintLayout {
         init(context, attrs);
     }
 
+    public EditText getEditText() {
+        return editText;
+    }
+
     /**
      * 获取输入的文字内容
      */
@@ -77,6 +80,11 @@ public class FormView extends ConstraintLayout {
             return null;
         }
         return editText.getText().toString().trim();
+    }
+
+    public void setFormInputEnable(boolean form_edit_input_enable) {
+        this.form_edit_input_enable = form_edit_input_enable;
+        editText.setFocusableInTouchMode(form_edit_input_enable);
     }
 
     @Override
@@ -89,12 +97,9 @@ public class FormView extends ConstraintLayout {
         return (int) (dp * getContext().getResources().getDisplayMetrics().density + 0.5f);
     }
 
-    public EditText getEditText() {
-        return editText;
-    }
 
-    private EditText editText;
-    private TextView tv_name, tv_unit;
+
+
 
     private void init(Context context, AttributeSet attrs) {
         removeAllViews();

@@ -25,7 +25,7 @@ import java.util.ArrayList;
  * ClassName:      ChameleonView
  * Author:         dev-gxy
  * CreateDate:     2021/4/27 11:00
- * Description: 可显示不同色块的条状bar，适用于展示存储空间信息
+ * Description: 可显示不同色块的条状bar，适用于展示存储空间信息，简单数据统计预览条等场景
  */
 public class ChameleonView extends View implements LifecycleObserver {
 
@@ -33,7 +33,7 @@ public class ChameleonView extends View implements LifecycleObserver {
     private ArrayList<Paint> mPaints;// 绘制色块
     private ArrayList<RectF> mRectFS;// 绘制色块
     private float mMaxValue;// 最大值
-    private float[] mChildValues;// 每个色块的值
+    private float[] mChildValues;// 每个色块对应的值
     private RectF mClipRectF;// 裁剪背景
     private Path mClipPath;// 裁剪背景
     private int clShapeRadius;// 裁剪的圆角 view背景的圆角
@@ -72,6 +72,7 @@ public class ChameleonView extends View implements LifecycleObserver {
      * 绑定声明周期
      *
      * @param owner LifecycleOwner
+     *              activity.bindLifecycleObserver(this)
      */
     public void bindLifecycleObserver(LifecycleOwner owner) {
         if (owner != null) {
@@ -81,8 +82,12 @@ public class ChameleonView extends View implements LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     public void onDestroy() {
-        mPaints.clear();
-        mRectFS.clear();
+        if (mPaints != null) {
+            mPaints.clear();
+        }
+        if (mRectFS != null) {
+            mRectFS.clear();
+        }
     }
 
     /**
@@ -107,7 +112,8 @@ public class ChameleonView extends View implements LifecycleObserver {
         for (int i = 0; i < colors.length; i++) {
             allValues += childValues[i];
             if (allValues > maxValue) {
-                throw new IllegalStateException("The total value of the color block cannot be greater than the maximum value");
+                this.mMaxValue = allValues;// 实际应用中可能会出现超出最大值的情况
+//                throw new IllegalStateException("The total value of the colors cannot be greater than the maximum value");
             }
             Paint paint = new Paint();
             paint.setAntiAlias(true);
@@ -137,14 +143,14 @@ public class ChameleonView extends View implements LifecycleObserver {
         mClipPath.addRoundRect(mClipRectF, clShapeRadius, clShapeRadius, Path.Direction.CW);
         canvas.clipPath(mClipPath);
         super.onDraw(canvas);
-        // draw color
+        // draw color lump
         if (mPaints == null) return;
-        float startLeft = 0;
+        float drawStartLeft = 0;
         for (int i = 0; i < mPaints.size(); i++) {
             float pr = mChildValues[i] / mMaxValue;
             float drawWidth = pr * mWidth;
-            mRectFS.get(i).set(startLeft, 0.0f, startLeft + drawWidth, mHeight);
-            startLeft += drawWidth;
+            mRectFS.get(i).set(drawStartLeft, 0.0f, drawStartLeft + drawWidth, mHeight);
+            drawStartLeft += drawWidth;
             canvas.drawRect(mRectFS.get(i), mPaints.get(i));
         }
     }
