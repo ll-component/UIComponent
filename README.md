@@ -31,8 +31,7 @@ dependencies {
 
 # EmptyView
 空数据视图-（图标加文字描述）
-继承于ConstraintLayout
-
+继承于ConstraintLayout，如果有需要在其中addView，在xml中EmptyView内声明新的控件就可以了，EmptyView中图标的id为"icon"，文字的id为"title"，新控件的相对位置若需要基于这两者，直接使用就行。
 <img src="https://gitee.com/dayun220/private-img/raw/master/01.jpg" width="360" height="720" alt="空数据视图"/><br/>
 
 
