@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ll.uicomponentexample.R;
 
+import java.util.HashMap;
+
 public class TouchEventTestActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +26,7 @@ public class TouchEventTestActivity extends AppCompatActivity {
             }
         });
 
+        HashMap<String, String> hashMap = new HashMap<>(3);
     }
 
     @Override
