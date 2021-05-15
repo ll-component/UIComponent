@@ -151,10 +151,13 @@ public class FormView extends ConstraintLayout {
             Drawable form_end_icon = ta.getDrawable(R.styleable.FormView_form_end_icon);
             if (form_end_icon == null) {
                 img_end_icon.setVisibility(GONE);
+                unitLayoutParams.endToEnd = 0;
             } else {
                 img_end_icon.setVisibility(VISIBLE);
                 img_end_icon.setImageDrawable(form_end_icon);
+                unitLayoutParams.startToEnd = R.id.img_end_icon;
             }
+
 
             int form_bottom_line_color = ta.getColor(R.styleable.FormView_form_bottom_line_color, Color.parseColor("#E0E0E0"));
             boolean form_bottom_line_gone = ta.getBoolean(R.styleable.FormView_form_bottom_line_gone, false);

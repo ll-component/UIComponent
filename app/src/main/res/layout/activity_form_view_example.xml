@@ -32,9 +32,9 @@
             app:form_edit_input_type="TYPE_CLASS_PHONE"
             app:form_name="        人数"
             app:form_unit="人"
-            app:form_unit_marginEnd="10dp"
+            app:form_unit_marginEnd="0dp"
             app:form_edit_marginStart="54dp"
-            app:form_end_icon="@mipmap/base_ic_arrow_right_gray"/>
+            />
 
         <com.ll.uicomponent.FormView
             android:id="@+id/choose"
