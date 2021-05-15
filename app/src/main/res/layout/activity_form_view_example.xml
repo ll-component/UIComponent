@@ -22,7 +22,7 @@
             android:layout_marginTop="10dp"
             app:form_edit_hint="请输入手机号"
             app:form_edit_input_type="TYPE_CLASS_PHONE"
-            app:form_name="手机号" />
+            app:form_name="    手机号" />
 
         <com.ll.uicomponent.FormView
             android:layout_width="match_parent"
@@ -30,9 +30,10 @@
             android:layout_marginTop="10dp"
             app:form_edit_hint="请输入人数"
             app:form_edit_input_type="TYPE_CLASS_PHONE"
-            app:form_name="    人数"
+            app:form_name="        人数"
             app:form_unit="人"
             app:form_unit_marginEnd="10dp"
+            app:form_edit_marginStart="54dp"
             app:form_end_icon="@mipmap/base_ic_arrow_right_gray"/>
 
         <com.ll.uicomponent.FormView
@@ -45,7 +46,7 @@
             app:form_edit_input_enable="false"
             app:form_edit_input_type="TYPE_CLASS_PHONE"
             app:form_end_icon="@mipmap/base_ic_arrow_right_gray"
-            app:form_name="    地区" />
+            app:form_name="        地区" />
 
         <com.ll.uicomponent.FormView
             android:id="@+id/tiktok"
@@ -65,7 +66,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:paddingStart="15dp"
             app:form_bottom_line_color="@color/colorAccent"
             app:form_bottom_line_startToStart_edit="false"
             app:form_edit_paddingTop="14dp"

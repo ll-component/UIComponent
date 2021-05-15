@@ -2,7 +2,9 @@ package com.ll.uicomponent;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +67,7 @@ public class EmptyView extends ConstraintLayout {
             ImageView icon = view.findViewById(R.id.icon);
             int empty_icon_height = (int) ta.getDimension(R.styleable.EmptyView_empty_icon_height, dp2Px(100));
             int empty_icon_width = (int) ta.getDimension(R.styleable.EmptyView_empty_icon_width, dp2Px(275));
+
             ConstraintLayout.LayoutParams iconParams = new ConstraintLayout.LayoutParams(
                     empty_icon_width, empty_icon_height);
             iconParams.startToStart = 0;
@@ -79,6 +82,12 @@ public class EmptyView extends ConstraintLayout {
             TextView textView = view.findViewById(R.id.title);
             textView.setText(title);
             boolean empty_title_topToBottom_icon = ta.getBoolean(R.styleable.EmptyView_empty_title_topToBottom_icon, false);
+            int empty_title_color = (int) ta.getColor(R.styleable.EmptyView_empty_title_color, Color.parseColor("#999999"));
+            textView.setTextColor(empty_title_color);
+
+            int empty_title_size = (int) ta.getInteger(R.styleable.EmptyView_empty_title_size, 12);
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, empty_title_size);
+
             int bottomToBottom_margin = (int) ta.getDimension(R.styleable.EmptyView_empty_title_bottomToBottom_margin, 10);
             int topToBottom_margin = (int) ta.getDimension(R.styleable.EmptyView_empty_title_topToBottom_margin, 10);
 

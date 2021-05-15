@@ -3,6 +3,8 @@
 
     <declare-styleable name="EmptyView">
         <attr name="empty_title" format="string" />
+        <attr name="empty_title_size" format="integer" />
+        <attr name="empty_title_color" format="color" />
         <attr name="empty_icon_width" format="dimension" />
         <attr name="empty_icon_height" format="dimension">
             <enum name="fill_parent" value="-1" />
@@ -22,7 +24,7 @@
         <attr name="form_name" format="string" />
         <attr name="form_name_centerVertical" format="boolean" />
         <attr name="form_name_marginTop" format="dimension" />
-        <attr name="form_name_text_size" format="dimension" />
+        <attr name="form_name_text_size" format="integer" />
         <attr name="form_name_text_color" format="color" />
         <attr name="form_name_text_style" format="enum">
             <enum name="BOLD" value="1" />
@@ -33,7 +35,7 @@
             <enum name="BOLD" value="1" />
             <enum name="NORMAL" value="0" />
         </attr>
-        <attr name="form_unit_text_size" format="dimension" />
+        <attr name="form_unit_text_size" format="integer" />
         <attr name="form_unit_marginEnd" format="dimension" />
         <attr name="form_unit_text_color" format="color" />
         <attr name="form_end_icon" format="reference" />
@@ -42,6 +44,7 @@
         <attr name="form_bottom_line_startToStart_edit" format="boolean" />
 
         <attr name="form_edit_hint" format="string" />
+        <attr name="form_edit_marginStart" format="dimension"/>
         <attr name="form_edit_paddingTop" format="dimension" />
         <attr name="form_edit_gravity" format="enum">
             <enum name="CENTER_VERTICAL" value="0" />
@@ -56,7 +59,7 @@
         </attr>
         <attr name="form_edit_input_enable" format="boolean" />
         <attr name="form_edit_hint_color" format="color" />
-        <attr name="form_edit_text_size" format="dimension" />
+        <attr name="form_edit_text_size" format="integer" />
         <attr name="form_edit_text_color" format="color" />
         <attr name="form_edit_text" format="string" />
         <attr name="form_edit_text_style" format="enum">
@@ -119,5 +122,20 @@
         <attr name="searchBgShapeSolidColor" format="color"/>
         <attr name="searchBgShapeStrokeWidth" format="dimension"/>
         <attr name="searchBgShapeStrokeColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="DivergenceShadowButton">
+        <attr name="divButtonStartColor" format="color"/>
+        <attr name="divButtonEndColor" format="color"/>
+        <attr name="divButtonRadius" format="dimension"/>
+        <attr name="divButtonHeight" format="dimension"/>
+        <attr name="divShadowImgSrc" format="reference"/>
+        <attr name="divShadowImgHeight" format="dimension"/>
+        <attr name="divShadowImgMarginTop" format="dimension"/>
+        <attr name="divText" format="string"/>
+        <attr name="divTextColor" format="color"/>
+        <attr name="divTextSize" format="integer"/>
+        <attr name="divTextBold" format="boolean"/>
+        <attr name="divRadius" format="dimension"/>
     </declare-styleable>
 </resources>

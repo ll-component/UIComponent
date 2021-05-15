@@ -10,6 +10,7 @@ import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -113,7 +114,7 @@ public class FormView extends ConstraintLayout {
         if (attrs != null) {
             TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.FormView);
             String form_name = ta.getString(R.styleable.FormView_form_name);
-            int form_name_text_size = (int) ta.getDimension(R.styleable.FormView_form_name_text_size, 14);
+            int form_name_text_size = (int) ta.getInteger(R.styleable.FormView_form_name_text_size, 14);
             int form_name_marginTop = (int) ta.getDimension(R.styleable.FormView_form_name_marginTop, 14);
             int form_name_text_color = ta.getColor(R.styleable.FormView_form_name_text_color, Color.parseColor("#333333"));
             int form_name_text_style = ta.getInteger(R.styleable.FormView_form_name_text_style, Typeface.BOLD);
@@ -128,18 +129,18 @@ public class FormView extends ConstraintLayout {
             }
             tv_name.setLayoutParams(params);
             tv_name.setText(form_name);
-            tv_name.setTextSize(form_name_text_size);
+            tv_name.setTextSize(TypedValue.COMPLEX_UNIT_SP, form_name_text_size);
             tv_name.setTextColor(form_name_text_color);
             tv_name.setTypeface(Typeface.create(Typeface.DEFAULT, form_name_text_style));
 
             String form_unit = ta.getString(R.styleable.FormView_form_unit);
-            int form_unit_text_size = (int) ta.getDimension(R.styleable.FormView_form_unit_text_size, 14);
+            int form_unit_text_size = (int) ta.getInteger(R.styleable.FormView_form_unit_text_size, 14);
             int form_unit_text_style = ta.getInteger(R.styleable.FormView_form_unit_text_style, Typeface.BOLD);
             int form_unit_text_color = ta.getColor(R.styleable.FormView_form_unit_text_color, Color.parseColor("#333333"));
             if (form_unit != null) {
                 tv_unit.setText(form_unit);
             }
-            tv_unit.setTextSize(form_unit_text_size);
+            tv_unit.setTextSize(TypedValue.COMPLEX_UNIT_SP, form_unit_text_size);
             tv_unit.setTextColor(form_unit_text_color);
             int form_unit_marginEnd = (int) ta.getDimension(R.styleable.FormView_form_unit_marginEnd, 0);
             ConstraintLayout.LayoutParams unitLayoutParams = (LayoutParams) tv_unit.getLayoutParams();
@@ -175,22 +176,24 @@ public class FormView extends ConstraintLayout {
             String form_edit_hint = ta.getString(R.styleable.FormView_form_edit_hint);
             String form_edit_text = ta.getString(R.styleable.FormView_form_edit_text);
             int form_edit_hint_color = ta.getColor(R.styleable.FormView_form_edit_hint_color, Color.parseColor("#CCCCCC"));
-            int form_edit_text_size = (int) ta.getDimension(R.styleable.FormView_form_edit_text_size, 14);
+            int form_edit_text_size = (int) ta.getInteger(R.styleable.FormView_form_edit_text_size, 14);
             int form_edit_text_color = ta.getColor(R.styleable.FormView_form_edit_text_color, Color.parseColor("#333333"));
             int form_edit_max_length = ta.getInteger(R.styleable.FormView_form_edit_max_length, 1000);
             int form_edit_input_type = ta.getInteger(R.styleable.FormView_form_edit_input_type, InputType.TYPE_CLASS_TEXT);
             form_edit_input_enable = ta.getBoolean(R.styleable.FormView_form_edit_input_enable, true);
             int form_edit_text_style = ta.getInteger(R.styleable.FormView_form_edit_text_style, Typeface.NORMAL);
+            int form_edit_marginStart = (int) ta.getDimension(R.styleable.FormView_form_edit_marginStart, dp2Px(13));
             int form_edit_paddingTop = (int) ta.getDimension(R.styleable.FormView_form_edit_paddingTop, 14);
             setFormInputEnable(form_edit_input_enable);
             int form_edit_gravity = ta.getInteger(R.styleable.FormView_form_edit_gravity, 7);
+            ConstraintLayout.LayoutParams layoutParams1 = (LayoutParams) editText.getLayoutParams();
+            layoutParams1.setMarginStart(form_edit_marginStart);
             switch (form_edit_gravity) {
                 case 0:
                     editText.setGravity(Gravity.CENTER_VERTICAL);
                     break;
                 case 1: {
                     editText.setGravity(Gravity.TOP);
-                    ConstraintLayout.LayoutParams layoutParams1 = (LayoutParams) editText.getLayoutParams();
                     layoutParams1.topMargin = form_edit_paddingTop;
                     break;
                 }
@@ -205,7 +208,6 @@ public class FormView extends ConstraintLayout {
                     break;
                 case 5: {
                     editText.setGravity(Gravity.TOP | Gravity.START);
-                    ConstraintLayout.LayoutParams layoutParams1 = (LayoutParams) editText.getLayoutParams();
                     layoutParams1.topMargin = form_edit_paddingTop;
                     break;
                 }
@@ -221,7 +223,7 @@ public class FormView extends ConstraintLayout {
             }
             editText.setHint(form_edit_hint);
             editText.setHintTextColor(form_edit_hint_color);
-            editText.setTextSize(form_edit_text_size);
+            editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, form_edit_text_size);
             editText.setTextColor(form_edit_text_color);
             editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(form_edit_max_length)});
             if (form_edit_input_type == InputType.TYPE_TEXT_FLAG_MULTI_LINE) {

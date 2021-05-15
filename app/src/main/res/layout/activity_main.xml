@@ -132,4 +132,25 @@
 
 
 
+    <com.ll.uicomponent.DivergenceShadowButton
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        app:divText="确定"
+        app:divShadowImgSrc="@mipmap/ic_shadow_btn"
+        />
+
+    <com.ll.uicomponent.DivergenceShadowButton
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        app:divButtonHeight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        app:divText="确定"
+        app:divTextSize="12"
+        app:divShadowImgSrc="@mipmap/ic_shadow_btn1"
+        />
+
+
 </LinearLayout>
