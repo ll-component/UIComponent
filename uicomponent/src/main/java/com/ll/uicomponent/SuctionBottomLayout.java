@@ -51,6 +51,7 @@ public class SuctionBottomLayout extends LinearLayout {
     }
 
     private void init(AttributeSet attrs) {
+        setOrientation(LinearLayout.VERTICAL);
         mPaint = new Paint();
         mPaint.setColor(Color.WHITE);
         mPaint.setAntiAlias(true);
