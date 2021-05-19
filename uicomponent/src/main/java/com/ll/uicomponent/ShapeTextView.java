@@ -35,8 +35,8 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
     private int mShapeStrokeEndColor = -1;// 边框渐变色end
     private int mColorOrientation;// 颜色渐变方向
     private float mShapeRadius;// shape半径
-    private float mStrokeWidth;// 边框线宽
-
+    private float mStrokeWidth = 0.5f;// 边框线宽
+    private int mStrokeColor;
 
     public ShapeTextView(@NonNull Context context) {
         super(context);
@@ -112,7 +112,7 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
             float bottomLeftRadius = ta.getDimension(R.styleable.ShapeTextView_shapeBottomLeftRadius, 0);
             float bottomRightRadius = ta.getDimension(R.styleable.ShapeTextView_shapeBottomRightRadius, 0);
             int solidColor = ta.getColor(R.styleable.ShapeTextView_shapeSolidColor, Color.TRANSPARENT);
-            int strokeColor = ta.getColor(R.styleable.ShapeTextView_shapeStrokeColor, Color.TRANSPARENT);
+            mStrokeColor = ta.getColor(R.styleable.ShapeTextView_shapeStrokeColor, Color.TRANSPARENT);
             mStrokeWidth = ta.getDimension(R.styleable.ShapeTextView_shapeStrokeWidth, 0);
             int shape = ta.getInt(R.styleable.ShapeTextView_shape, GradientDrawable.RECTANGLE);
             int startColor = ta.getColor(R.styleable.ShapeTextView_shapeStartColor, Color.TRANSPARENT);
@@ -145,7 +145,7 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
                 }
                 drawable.setShape(shape);
                 if (mStrokeWidth > 0) {
-                    drawable.setStroke((int) mStrokeWidth, strokeColor);// 边框
+                    drawable.setStroke((int) mStrokeWidth, mStrokeColor);// 边框
                 }
                 if (topLeftRadius > 0 || topRightRadius > 0 || bottomLeftRadius > 0 || bottomRightRadius > 0) {
                     float[] radius = new float[]{
@@ -166,6 +166,13 @@ public class ShapeTextView extends androidx.appcompat.widget.AppCompatTextView {
     public void setShapeSolidColor(@ColorInt int color) {
         GradientDrawable background = (GradientDrawable) getBackground();
         background.setColor(color);
+        invalidate();
+    }
+
+    public void setShapeStrokeColor(@ColorInt int color) {
+        mStrokeColor = color;
+        GradientDrawable background = (GradientDrawable) getBackground();
+        background.setStroke((int) mStrokeWidth, mStrokeColor);
         invalidate();
     }
 
