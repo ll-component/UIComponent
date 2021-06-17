@@ -45,6 +45,9 @@ public class FormViewExampleActivity extends AppCompatActivity implements View.O
 
         FormView tiktok = findViewById(R.id.tiktok);
         tiktok.setFormInputEnable(false);
+
+        FormView choose = findViewById(R.id.choose);
+        choose.setFormUnit("9999.9999");
     }
 
     @Override

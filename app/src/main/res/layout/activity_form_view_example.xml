@@ -44,6 +44,8 @@
             android:onClick="onClick"
             app:form_edit_hint="请选择地区"
             app:form_edit_input_enable="false"
+            app:form_unit_marginEnd="30dp"
+            app:form_unit="999.9999"
             app:form_edit_input_type="TYPE_CLASS_PHONE"
             app:form_end_icon="@mipmap/base_ic_arrow_right_gray"
             app:form_name="        地区" />
