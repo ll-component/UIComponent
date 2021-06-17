@@ -14,10 +14,11 @@ import android.view.View.OnFocusChangeListener;
 import android.view.animation.Animation;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
+import android.widget.EditText;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-public class ClearEditTextView extends AppCompatEditText implements OnFocusChangeListener, TextWatcher {
+public class ClearEditTextView extends androidx.appcompat.widget.AppCompatEditText implements OnFocusChangeListener, TextWatcher {
 
     private Drawable mClearDrawable;
     private Drawable mStartDrawable;

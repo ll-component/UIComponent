@@ -1,10 +1,20 @@
 package com.ll.uicomponentexample;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
 import android.os.Looper;
+import android.os.Message;
+import android.os.MessageQueue;
+import android.os.RemoteException;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ll.uicomponentexample.example.ChameleonViewExampleActivity;
@@ -15,6 +25,10 @@ import com.ll.uicomponentexample.example.RotateTextViewExampleActivity;
 import com.ll.uicomponentexample.example.ShapeTextViewExampleActivity;
 import com.ll.uicomponentexample.example.SuctionBottomLayoutExampleActivity;
 import com.ll.uicomponentexample.example.TouchEventTestActivity;
+import com.ll.uicomponentexample.test.StandardActivity;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,7 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
     }
+
 
     @Override
     public void onClick(View v) {
@@ -50,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.touchEventTest:
                 startActivity(new Intent(this, TouchEventTestActivity.class));
+                break;
+            case R.id.div_task:
+                startActivity(new Intent(this, StandardActivity.class));
                 break;
         }
     }

@@ -19,13 +19,18 @@ import com.ll.uicomponentexample.example.bean.MyAidlBean;
  */
 public class MyAidlService extends Service {
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return iBinder;
     }
 
-    private IBinder iBinder = new IMyAidlInterface.Stub() {
+    public IBinder iBinder = new IMyAidlInterface.Stub() {
         @Override
         public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
 

@@ -2,13 +2,40 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ll.uicomponentexample">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".example.TouchEventTestActivity"></activity>
+        <service
+            android:name=".MyIntentService"
+            android:exported="false"></service>
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".test.StandardActivity"
+            android:label="StandardActivity"
+            android:launchMode="standard" />
+        <activity
+            android:name=".test.SingleInstanceActivity"
+            android:label="SingleInstanceActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".test.SingleTopActivity"
+            android:label="SingleTopActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".test.SingleTaskActivity"
+            android:label="SingleTaskActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".example.TouchEventTestActivity" />
         <activity android:name=".example.ChameleonViewExampleActivity" />
         <activity android:name=".example.SuctionBottomLayoutExampleActivity" />
         <activity android:name=".example.ClearEditTextViewExampleActivity" />

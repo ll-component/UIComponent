@@ -17,6 +17,8 @@
         android:drawablePadding="10dp"
         android:hint="ClearEditTextView"
         android:paddingStart="10dp"
+        android:maxLines="1"
+        android:inputType="text"
         android:paddingEnd="10dp"
         app:searchBgShapeRadius="20dp"
         app:searchBgShapeSolidColor="#F6F6F6" />

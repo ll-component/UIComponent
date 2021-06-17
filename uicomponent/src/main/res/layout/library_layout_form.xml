@@ -2,7 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 <!--    android:layout_width="match_parent"-->
 <!--    android:layout_height="wrap_content"-->
     <TextView
@@ -40,7 +40,7 @@
         android:layout_height="13dp"
         android:src="@mipmap/base_ic_arrow_right_gray"
         app:layout_constraintBottom_toBottomOf="@id/edit"
-        app:layout_constraintEnd_toEndOf="@id/edit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/edit"
         />
 
@@ -48,7 +48,7 @@
         android:id="@+id/tv_unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        tools:text="99.999999"
         android:textColor="#ff333333"
         android:textSize="14sp"
         android:textStyle="bold"
